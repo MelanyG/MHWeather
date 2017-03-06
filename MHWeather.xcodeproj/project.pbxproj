@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		39BC424D1E6D589A0081FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC424C1E6D589A0081FE53 /* AppDelegate.swift */; };
-		39BC424F1E6D589A0081FE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC424E1E6D589A0081FE53 /* ViewController.swift */; };
 		39BC42521E6D589A0081FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42501E6D589A0081FE53 /* Main.storyboard */; };
 		39BC42551E6D589A0081FE53 /* MHWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39BC42531E6D589A0081FE53 /* MHWeather.xcdatamodeld */; };
 		39BC42571E6D589A0081FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42561E6D589A0081FE53 /* Assets.xcassets */; };
 		39BC425A1E6D589A0081FE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42581E6D589A0081FE53 /* LaunchScreen.storyboard */; };
+		39BC42651E6D5B530081FE53 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC42641E6D5B530081FE53 /* ConnectionManager.swift */; };
+		39BC426A1E6D5BB40081FE53 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC42691E6D5BB40081FE53 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39BC42491E6D589A0081FE53 /* MHWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC424C1E6D589A0081FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39BC424E1E6D589A0081FE53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39BC42511E6D589A0081FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39BC42541E6D589A0081FE53 /* MHWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MHWeather.xcdatamodel; sourceTree = "<group>"; };
 		39BC42561E6D589A0081FE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39BC42591E6D589A0081FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39BC425B1E6D589B0081FE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BC42641E6D5B530081FE53 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		39BC42691E6D5BB40081FE53 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,9 @@
 		39BC424B1E6D589A0081FE53 /* MHWeather */ = {
 			isa = PBXGroup;
 			children = (
+				39BC42681E6D5BB40081FE53 /* PresentationLayer */,
+				39BC42631E6D5B530081FE53 /* NetworkLayer */,
 				39BC424C1E6D589A0081FE53 /* AppDelegate.swift */,
-				39BC424E1E6D589A0081FE53 /* ViewController.swift */,
 				39BC42501E6D589A0081FE53 /* Main.storyboard */,
 				39BC42561E6D589A0081FE53 /* Assets.xcassets */,
 				39BC42581E6D589A0081FE53 /* LaunchScreen.storyboard */,
@@ -65,6 +68,22 @@
 				39BC42531E6D589A0081FE53 /* MHWeather.xcdatamodeld */,
 			);
 			path = MHWeather;
+			sourceTree = "<group>";
+		};
+		39BC42631E6D5B530081FE53 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				39BC42641E6D5B530081FE53 /* ConnectionManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		39BC42681E6D5BB40081FE53 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				39BC42691E6D5BB40081FE53 /* StartViewController.swift */,
+			);
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BC424F1E6D589A0081FE53 /* ViewController.swift in Sources */,
 				39BC42551E6D589A0081FE53 /* MHWeather.xcdatamodeld in Sources */,
+				39BC426A1E6D5BB40081FE53 /* StartViewController.swift in Sources */,
+				39BC42651E6D5B530081FE53 /* ConnectionManager.swift in Sources */,
 				39BC424D1E6D589A0081FE53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
