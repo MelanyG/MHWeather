@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390C45E01E72C6D900A2654E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45DF1E72C6D900A2654E /* LocationManager.swift */; };
+		390C45E21E72E1FF00A2654E /* SubMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45E11E72E1FF00A2654E /* SubMenuTVC.swift */; };
+		390C45E81E72E36300A2654E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45E71E72E36300A2654E /* BaseTableViewCell.swift */; };
+		390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45E91E72F48400A2654E /* LocationCellObject.swift */; };
+		390C45EC1E730AF000A2654E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45EB1E730AF000A2654E /* Protocols.swift */; };
 		39BC424D1E6D589A0081FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC424C1E6D589A0081FE53 /* AppDelegate.swift */; };
 		39BC42521E6D589A0081FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42501E6D589A0081FE53 /* Main.storyboard */; };
 		39BC42551E6D589A0081FE53 /* MHWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39BC42531E6D589A0081FE53 /* MHWeather.xcdatamodeld */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390C45DF1E72C6D900A2654E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = MHWeather/NetworkLayer/LocationManager.swift; sourceTree = SOURCE_ROOT; };
+		390C45E11E72E1FF00A2654E /* SubMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubMenuTVC.swift; sourceTree = "<group>"; };
+		390C45E71E72E36300A2654E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		390C45E91E72F48400A2654E /* LocationCellObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationCellObject.swift; path = ../LocationCellObject.swift; sourceTree = "<group>"; };
+		390C45EB1E730AF000A2654E /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		39BC42491E6D589A0081FE53 /* MHWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC424C1E6D589A0081FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BC42511E6D589A0081FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390C45E61E72E36300A2654E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				390C45E71E72E36300A2654E /* BaseTableViewCell.swift */,
+				390C45E91E72F48400A2654E /* LocationCellObject.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		39BC42401E6D589A0081FE53 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +92,7 @@
 		39BC42631E6D5B530081FE53 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				390C45DF1E72C6D900A2654E /* LocationManager.swift */,
 				39BC42641E6D5B530081FE53 /* ConnectionManager.swift */,
 			);
 			path = NetworkLayer;
@@ -81,6 +101,9 @@
 		39BC42681E6D5BB40081FE53 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				390C45E61E72E36300A2654E /* Cell */,
+				390C45E11E72E1FF00A2654E /* SubMenuTVC.swift */,
+				390C45EB1E730AF000A2654E /* Protocols.swift */,
 				39BC42691E6D5BB40081FE53 /* StartViewController.swift */,
 			);
 			path = PresentationLayer;
@@ -160,6 +183,11 @@
 			files = (
 				39BC42551E6D589A0081FE53 /* MHWeather.xcdatamodeld in Sources */,
 				39BC426A1E6D5BB40081FE53 /* StartViewController.swift in Sources */,
+				390C45E01E72C6D900A2654E /* LocationManager.swift in Sources */,
+				390C45EC1E730AF000A2654E /* Protocols.swift in Sources */,
+				390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */,
+				390C45E21E72E1FF00A2654E /* SubMenuTVC.swift in Sources */,
+				390C45E81E72E36300A2654E /* BaseTableViewCell.swift in Sources */,
 				39BC42651E6D5B530081FE53 /* ConnectionManager.swift in Sources */,
 				39BC424D1E6D589A0081FE53 /* AppDelegate.swift in Sources */,
 			);
@@ -289,6 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MH.MHWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -301,6 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MH.MHWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -323,6 +353,7 @@
 				39BC42601E6D589B0081FE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

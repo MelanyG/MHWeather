@@ -10,7 +10,16 @@ import Foundation
 
 class ConnectionManager {
     
+    fileprivate struct Constants {
+        static let ServerName = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/q/"
+        static let Key = "5ae5ac6f06196ca9"
+        static let Format = ".json"
+    }
     let connectionManager:URLSession
+    var latitude: String?
+    var longitude: String?
+    var url: String?
+    
     
     static let sharedInstance : ConnectionManager = {
         let instance = ConnectionManager()
@@ -19,6 +28,15 @@ class ConnectionManager {
     
     init() {
         connectionManager = URLSession.shared
+    }
+    
+    func downloadByZipCode(zipCode: String) {
+        url = "\(Constants.ServerName) + \(zipCode).json"
+        downLoadWeather(url!)
+    }
+   
+    func downloadByCoordinates(long: String, lat: String) {
+        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/q/ + \(lat) + \(long).json"
     }
     
     func downLoadWeather(_ url:String) {
@@ -52,6 +70,10 @@ class ConnectionManager {
         task.resume()
         
     }
+    
+    
+    
 }
+
 
 
