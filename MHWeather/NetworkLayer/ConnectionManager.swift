@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 class ConnectionManager {
     
@@ -19,7 +21,8 @@ class ConnectionManager {
     var latitude: String?
     var longitude: String?
     var url: String?
-    
+
+
     
     static let sharedInstance : ConnectionManager = {
         let instance = ConnectionManager()
@@ -27,6 +30,7 @@ class ConnectionManager {
     }()
     
     init() {
+      
         connectionManager = URLSession.shared
     }
     
@@ -70,7 +74,6 @@ class ConnectionManager {
         task.resume()
         
     }
-    
     
     
 }

@@ -16,12 +16,12 @@ var locationPoints = [LocationCellObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationPoints.append(LocationCellObject(img: "controls-share", text: "Share"))
-        locationPoints.append(LocationCellObject(img: "selectedPin", text: "EditLocations"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "New York"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Paris"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Chicago"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv"))
+        locationPoints.append(LocationCellObject(img: "controls-share", text: "Share", updLatitude: "", updLongitude: ""))
+        locationPoints.append(LocationCellObject(img: "selectedPin", text: "EditLocations", updLatitude: "", updLongitude: ""))
+        locationPoints.append(LocationCellObject(img: "pin", text: "New York", updLatitude: "40.730610", updLongitude: "-73.935242"))
+        locationPoints.append(LocationCellObject(img: "pin", text: "Paris", updLatitude: "48.864716", updLongitude: "2.349014"))
+        locationPoints.append(LocationCellObject(img: "pin", text: "Chicago", updLatitude: "41.881832", updLongitude: "-87.623177"))
+        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv", updLatitude: "49.85", updLongitude: "24.0166666667"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,9 +57,9 @@ var locationPoints = [LocationCellObject]()
         return cell!
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedlocation = locationPoints[indexPath.row]
-        self.delegate?.locationSelected(selectedlocation)
+        self.delegate?.locationSelected(newLocation: selectedlocation)
     }
     /*
     // Override to support conditional editing of the table view.
