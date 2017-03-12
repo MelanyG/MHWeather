@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let splitViewController = self.window!.rootViewController as! UISplitViewController
+        let leftNavController = splitViewController.viewControllers.first as! UINavigationController
+        let subMenuViewController = leftNavController.topViewController as! SubMenuTVC
+        let startViewController = splitViewController.viewControllers.last as! StartViewController
+        
+        subMenuViewController.delegate = startViewController
         // Override point for customization after application launch.
         return true
     }
