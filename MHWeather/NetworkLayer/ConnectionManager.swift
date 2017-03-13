@@ -38,9 +38,16 @@ class ConnectionManager {
         url = "\(Constants.ServerName) + \(zipCode).json"
         downLoadWeather(url!)
     }
+    
+    func downloadByLocationObject(object: LocationCellObject) {
+        downloadByCoordinates(long: object.longitude, lat: object.latitude)
+
+        downLoadWeather(url!)
+    }
    
     func downloadByCoordinates(long: String, lat: String) {
-        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/q/ + \(lat) + \(long).json"
+        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/hourly/q/\(lat),\(long).json"
+        downLoadWeather(url!)
     }
     
     func downLoadWeather(_ url:String) {
@@ -55,6 +62,7 @@ class ConnectionManager {
                 do {
                     if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                         print(jsonResult)
+                        JSONParser.sharedParser.response = jsonResult
 //                        dispatch_async(dispatch_get_main_queue(), {
 //                            
 //                            if let results: NSArray = jsonResult["results"] as? NSArray {

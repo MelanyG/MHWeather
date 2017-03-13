@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7IO-eO-7Pc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7IO-eO-7Pc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +22,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rst-9S-UwI">
-                                <frame key="frameInset" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="VxR-q7-UDa"/>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lviv" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-4V-Hpa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-1j-j7E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1p-qL-bE7">
+                                        <rect key="frame" x="128" y="8" width="120" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="dxi-ES-VoH"/>
+                                            <constraint firstAttribute="height" constant="21" id="h9d-on-tYF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:59 AM CDT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-rc-BCe">
+                                        <rect key="frame" x="128" y="34" width="120" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Wia-2r-eRa"/>
+                                            <constraint firstAttribute="width" constant="120" id="pSK-Cp-Pa9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="T1p-qL-bE7" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="911-7J-tok"/>
+                                    <constraint firstItem="z8b-rc-BCe" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="AI0-S1-lh2"/>
+                                    <constraint firstAttribute="height" constant="60" id="AIM-2f-g0b"/>
+                                    <constraint firstItem="z8b-rc-BCe" firstAttribute="top" secondItem="T1p-qL-bE7" secondAttribute="bottom" constant="5" id="W11-FD-AEZ"/>
+                                    <constraint firstItem="T1p-qL-bE7" firstAttribute="top" secondItem="lzr-1j-j7E" secondAttribute="topMargin" id="mgA-0d-MJL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-gc-Oct">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyCell" id="jw4-Uy-Vce">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jw4-Uy-Vce" id="8f4-Ir-qqi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentDayCell" rowHeight="183" id="nh4-W1-ozL">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="183"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nh4-W1-ozL" id="dH6-0c-7S9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="188-op-sk0" id="elO-Gg-eRp"/>
+                                    <outlet property="delegate" destination="188-op-sk0" id="CAL-bd-G8C"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K2b-uS-ZfG" firstAttribute="top" secondItem="HVY-4V-Hpa" secondAttribute="bottom" id="1t6-fG-okB"/>
+                            <constraint firstItem="lzr-1j-j7E" firstAttribute="top" secondItem="VnC-7w-7gj" secondAttribute="bottom" id="Rcs-TF-2HZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6NL-gc-Oct" secondAttribute="trailing" id="V1b-X9-ZUB"/>
+                            <constraint firstItem="HVY-4V-Hpa" firstAttribute="top" secondItem="VnC-7w-7gj" secondAttribute="bottom" id="Zwa-oF-Dwa"/>
+                            <constraint firstAttribute="trailing" secondItem="lzr-1j-j7E" secondAttribute="trailing" id="bNQ-fy-HDo"/>
+                            <constraint firstItem="K2b-uS-ZfG" firstAttribute="top" secondItem="6NL-gc-Oct" secondAttribute="bottom" id="jkl-0c-CoA"/>
+                            <constraint firstAttribute="trailing" secondItem="HVY-4V-Hpa" secondAttribute="trailing" id="kg2-rO-igv"/>
+                            <constraint firstItem="6NL-gc-Oct" firstAttribute="top" secondItem="lzr-1j-j7E" secondAttribute="bottom" id="n1p-QS-Kfp"/>
+                            <constraint firstItem="lzr-1j-j7E" firstAttribute="leading" secondItem="NS8-Kx-Q5C" secondAttribute="leading" id="rsG-hb-Aoa"/>
+                            <constraint firstItem="HVY-4V-Hpa" firstAttribute="leading" secondItem="NS8-Kx-Q5C" secondAttribute="leading" id="uvi-n6-Ujp"/>
+                            <constraint firstItem="6NL-gc-Oct" firstAttribute="leading" secondItem="NS8-Kx-Q5C" secondAttribute="leading" id="vcV-Xy-E51"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customNavBar" destination="lzr-1j-j7E" id="Nfd-3V-iIi"/>
+                        <outlet property="weatherTableView" destination="6NL-gc-Oct" id="Ttd-rX-gkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-7S-BoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="-16"/>
+            <point key="canvasLocation" x="517.60000000000002" y="-16.641679160419791"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="IOk-Xy-GOW">
@@ -44,19 +123,21 @@
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="ire-d0-Vxw" customClass="BaseTableViewCell" customModule="MHWeather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ire-d0-Vxw" id="mTq-S9-Y2w">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ric-An-1gH">
+                                            <rect key="frame" x="10" y="5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="Lyd-KS-2YQ"/>
                                                 <constraint firstAttribute="width" constant="35" id="SCl-2L-CSN"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWH-8s-2Pk">
+                                            <rect key="frame" x="85" y="1" width="275" height="42"/>
                                             <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="21"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -123,4 +204,7 @@
             <point key="canvasLocation" x="-434" y="-343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lviv" width="760" height="427"/>
+    </resources>
 </document>
