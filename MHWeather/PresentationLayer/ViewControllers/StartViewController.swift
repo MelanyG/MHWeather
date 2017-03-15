@@ -11,11 +11,13 @@ import CoreLocation
 
 class StartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var customNavBar: UIView!
+
+    @IBOutlet weak var navBar: TransparentNavigationBar!
     @IBOutlet weak var weatherTableView: UITableView!
-    
+    var currentCityForecast:CityForecastObject?
     var visualLocation: LocationCellObject?
     var conMan: ConnectionManager?
+//    var closureSaver: ((_ result:CityForecastObject?) -> Void)?
    //    var locationManager: CLLocationManager = CLLocationManager()
     
 //    required init(coder aDecoder: NSCoder) {
@@ -27,6 +29,10 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         conMan = ConnectionManager.sharedInstance
         weatherTableView.register(UINib(nibName: "CurrentDayForecastCell", bundle: nil), forCellReuseIdentifier: "CurrentDayCell")
 weatherTableView.delegate = self
+        navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navBar.shadowImage = UIImage()
+        navBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.clear
 //        conMan?.downLoadWeather("https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast10day/q/CA/San_Francisco.json")
      
         // Do any additional setup after loading the view.
@@ -46,8 +52,16 @@ weatherTableView.delegate = self
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 1 {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentDayCell", for: indexPath) as? CurrentDayForecastCell
-
-        cell?.bigTempLable.text = "40\u{00B0}"
+            cell?.mainLable.text = currentCityForecast?.weatherDaysArray[0].conditions
+            if currentCityForecast?.weatherDaysArray[0].maxTemp != nil {
+                cell?.topTemp.text = "\((currentCityForecast?.weatherDaysArray[0].maxTemp)!)"
+            }
+            if currentCityForecast?.weatherDaysArray[0].minTemp != nil {
+                cell?.lowTemp.text = "\((currentCityForecast?.weatherDaysArray[0].minTemp)!)"
+            }
+            if currentCityForecast?.weatherDaysArray[0].averageTemp != nil {
+                cell?.bigTempLable.text = "\((currentCityForecast?.weatherDaysArray[0].averageTemp)!)\u{00B0}"
+            }
             return cell!
         } else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
@@ -60,7 +74,7 @@ weatherTableView.delegate = self
         if indexPath.row == 1 {
             return 250
         } else {
-            return view.bounds.size.height - 300
+            return view.bounds.size.height - 350
         }
     }
     
@@ -87,6 +101,20 @@ weatherTableView.delegate = self
 extension StartViewController: LocationSelectionDelegate {
     func locationSelected(newLocation: LocationCellObject) {
         visualLocation = newLocation
-        conMan?.downloadByLocationObject(object: visualLocation!)
+
+        conMan?.downloadByLocationObject(object: visualLocation!) {
+            [unowned self] (result: CityForecastObject?) in
+            guard let keyCity = self.visualLocation?.textLbl else { return }
+            self.currentCityForecast = result
+            DispatchQueue.main.async {
+                self.weatherTableView.reloadData()
+                self.navBar.cityName.text = keyCity
+            }
+            DataSource.sharedDataSource.citiesForecast[keyCity] = result
+        }
+           
+//        guard let keyCity = visualLocation?.textLbl else { return }
+//        currentCityForecast = DataSource.sharedDataSource.citiesForecast[keyCity]!
+    
     }
 }

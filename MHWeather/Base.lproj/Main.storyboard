@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,38 +24,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lviv" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-4V-Hpa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-1j-j7E">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-1j-j7E" customClass="TransparentNavigationBar" customModule="MHWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1p-qL-bE7">
-                                        <rect key="frame" x="128" y="8" width="120" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz0-fJ-LPE">
+                                        <rect key="frame" x="132.5" y="0.0" width="111" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="dxi-ES-VoH"/>
-                                            <constraint firstAttribute="height" constant="21" id="h9d-on-tYF"/>
+                                            <constraint firstAttribute="height" constant="25" id="p7b-sV-OlC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:59 AM CDT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-rc-BCe">
-                                        <rect key="frame" x="128" y="34" width="120" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Wia-2r-eRa"/>
-                                            <constraint firstAttribute="width" constant="120" id="pSK-Cp-Pa9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo9-lV-SUM">
+                                        <rect key="frame" x="132.5" y="30" width="111" height="25"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="T1p-qL-bE7" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="911-7J-tok"/>
-                                    <constraint firstItem="z8b-rc-BCe" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="AI0-S1-lh2"/>
+                                    <constraint firstItem="Mo9-lV-SUM" firstAttribute="top" secondItem="Uz0-fJ-LPE" secondAttribute="bottom" constant="5" id="9uK-BJ-gI4"/>
                                     <constraint firstAttribute="height" constant="60" id="AIM-2f-g0b"/>
-                                    <constraint firstItem="z8b-rc-BCe" firstAttribute="top" secondItem="T1p-qL-bE7" secondAttribute="bottom" constant="5" id="W11-FD-AEZ"/>
-                                    <constraint firstItem="T1p-qL-bE7" firstAttribute="top" secondItem="lzr-1j-j7E" secondAttribute="topMargin" id="mgA-0d-MJL"/>
+                                    <constraint firstItem="Uz0-fJ-LPE" firstAttribute="top" secondItem="lzr-1j-j7E" secondAttribute="top" id="Da1-Pb-Yek"/>
+                                    <constraint firstItem="Uz0-fJ-LPE" firstAttribute="width" secondItem="Mo9-lV-SUM" secondAttribute="width" id="In7-Zt-Zjg"/>
+                                    <constraint firstItem="Mo9-lV-SUM" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="Knn-Fy-CaA"/>
+                                    <constraint firstItem="Uz0-fJ-LPE" firstAttribute="height" secondItem="Mo9-lV-SUM" secondAttribute="height" id="MV1-Ra-b2a"/>
+                                    <constraint firstItem="Uz0-fJ-LPE" firstAttribute="centerX" secondItem="lzr-1j-j7E" secondAttribute="centerX" id="fjY-JN-2Jj"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="cityName" destination="Uz0-fJ-LPE" id="cUT-ID-GPt"/>
+                                    <outlet property="timeInCity" destination="Mo9-lV-SUM" id="hAP-96-zaj"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-gc-Oct">
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
@@ -104,7 +104,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="customNavBar" destination="lzr-1j-j7E" id="Nfd-3V-iIi"/>
+                        <outlet property="navBar" destination="lzr-1j-j7E" id="dwD-qW-ymI"/>
                         <outlet property="weatherTableView" destination="6NL-gc-Oct" id="Ttd-rX-gkg"/>
                     </connections>
                 </viewController>

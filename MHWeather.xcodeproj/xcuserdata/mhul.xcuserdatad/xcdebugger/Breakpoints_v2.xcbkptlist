@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/StartViewController.swift"
-            timestampString = "511102893.431774"
+            timestampString = "511285404.892163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/StartViewController.swift"
-            timestampString = "511102893.431774"
+            timestampString = "511285404.892163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -86,16 +86,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MHWeather/NetworkLayer/ConnectionManager.swift"
-            timestampString = "511090626.018508"
+            filePath = "MHWeather/Application Layer/JSONParser.swift"
+            timestampString = "511271205.182718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "downLoadWeather(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "parseforecastDay(forecastday:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,46 +105,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MHWeather/NetworkLayer/ConnectionManager.swift"
-            timestampString = "511103238.010714"
+            filePath = "MHWeather/PresentationLayer/StartViewController.swift"
+            timestampString = "511285404.892163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "downLoadWeather(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MHWeather.ConnectionManager.downLoadWeather (Swift.String) -&gt; ()"
-                  moduleName = "MHWeather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mhul/Documents/Projects/Weather/MHWeather/NetworkLayer/ConnectionManager.swift"
-                  timestampString = "511111919.989488"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "248">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MHWeather.ConnectionManager.(downLoadWeather (Swift.String) -&gt; ()).(closure #1)"
-                  moduleName = "MHWeather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mhul/Documents/Projects/Weather/MHWeather/NetworkLayer/ConnectionManager.swift"
-                  timestampString = "511111919.995149"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

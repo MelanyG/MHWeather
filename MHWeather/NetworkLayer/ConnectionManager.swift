@@ -34,23 +34,24 @@ class ConnectionManager {
         connectionManager = URLSession.shared
     }
     
-    func downloadByZipCode(zipCode: String) {
+    func downloadByZipCode(zipCode: String, onCompletion:@escaping (_ result:CityForecastObject?) -> Void) {
         url = "\(Constants.ServerName) + \(zipCode).json"
-        downLoadWeather(url!)
+        downLoadWeather(url!, onCompletion: onCompletion)
     }
     
-    func downloadByLocationObject(object: LocationCellObject) {
-        downloadByCoordinates(long: object.longitude, lat: object.latitude)
+    func downloadByLocationObject(object: LocationCellObject, onCompletion:@escaping (_ result:CityForecastObject?) -> Void) {
+        downloadByCoordinates(long: object.longitude, lat: object.latitude, onCompletion: onCompletion)
 
-        downLoadWeather(url!)
+ 
+        
     }
    
-    func downloadByCoordinates(long: String, lat: String) {
-        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/hourly/q/\(lat),\(long).json"
-        downLoadWeather(url!)
+    func downloadByCoordinates(long: String, lat: String, onCompletion:@escaping (_ result:CityForecastObject?) -> Void) {
+        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/hourly/geolookup/q/\(lat),\(long).json"
+        downLoadWeather(url!, onCompletion: onCompletion)
     }
     
-    func downLoadWeather(_ url:String) {
+    func downLoadWeather(_ url:String, onCompletion:@escaping (_ result:CityForecastObject?) -> Void) {
         let requestURL: URL = URL(string: url)!
         let urlRequest: URLRequest = URLRequest(url: requestURL)
         let session = connectionManager
@@ -62,7 +63,9 @@ class ConnectionManager {
                 do {
                     if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                         print(jsonResult)
+                        
                         JSONParser.sharedParser.response = jsonResult
+                        onCompletion(JSONParser.sharedParser.genarateMainSource())
 //                        dispatch_async(dispatch_get_main_queue(), {
 //                            
 //                            if let results: NSArray = jsonResult["results"] as? NSArray {

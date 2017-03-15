@@ -21,7 +21,7 @@ var locationPoints = [LocationCellObject]()
         locationPoints.append(LocationCellObject(img: "pin", text: "New York", updLatitude: "40.730610", updLongitude: "-73.935242"))
         locationPoints.append(LocationCellObject(img: "pin", text: "Paris", updLatitude: "48.864716", updLongitude: "2.349014"))
         locationPoints.append(LocationCellObject(img: "pin", text: "Chicago", updLatitude: "41.881832", updLongitude: "-87.623177"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv", updLatitude: "49.85", updLongitude: "24.0166666667"))
+        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv", updLatitude: "49.8397", updLongitude: "24.0297"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
