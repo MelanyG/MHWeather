@@ -9,10 +9,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="VdL-SG-gmH">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZDP-nd-7I9" customClass="PageViewController" customModule="MHWeather" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WT2-xI-O2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="1"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="WUI-wy-550">
             <objects>
-                <viewController id="188-op-sk0" customClass="StartViewController" customModule="MHWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" id="188-op-sk0" customClass="StartViewController" customModule="MHWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VnC-7w-7gj"/>
                         <viewControllerLayoutGuide type="bottom" id="K2b-uS-ZfG"/>
@@ -110,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-7S-BoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517.60000000000002" y="-16.641679160419791"/>
+            <point key="canvasLocation" x="1468" y="2"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="IOk-Xy-GOW">
@@ -196,7 +204,7 @@
                 <splitViewController id="7IO-eO-7Pc" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Kf8-CN-7YU" kind="relationship" relationship="masterViewController" id="qlM-fK-Mqy"/>
-                        <segue destination="188-op-sk0" kind="relationship" relationship="detailViewController" id="Uyl-f7-zxC"/>
+                        <segue destination="ZDP-nd-7I9" kind="relationship" relationship="detailViewController" id="2NL-mu-fLu"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozj-HQ-8Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>

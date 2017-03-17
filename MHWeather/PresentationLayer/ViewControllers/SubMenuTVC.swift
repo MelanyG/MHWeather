@@ -11,17 +11,17 @@ import UIKit
 class SubMenuTVC: UITableViewController {
     
 weak var delegate: LocationSelectionDelegate?
-var locationPoints = [LocationCellObject]()
+//var locationPoints = [LocationCellObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationPoints.append(LocationCellObject(img: "controls-share", text: "Share", updLatitude: "", updLongitude: ""))
-        locationPoints.append(LocationCellObject(img: "selectedPin", text: "EditLocations", updLatitude: "", updLongitude: ""))
-        locationPoints.append(LocationCellObject(img: "pin", text: "New York", updLatitude: "40.730610", updLongitude: "-73.935242"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Paris", updLatitude: "48.864716", updLongitude: "2.349014"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Chicago", updLatitude: "41.881832", updLongitude: "-87.623177"))
-        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv", updLatitude: "49.8397", updLongitude: "24.0297"))
+//        locationPoints.append(LocationCellObject(img: "controls-share", text: "Share", updLatitude: "", updLongitude: ""))
+//        locationPoints.append(LocationCellObject(img: "selectedPin", text: "EditLocations", updLatitude: "", updLongitude: ""))
+//        locationPoints.append(LocationCellObject(img: "pin", text: "New York", updLatitude: "40.730610", updLongitude: "-73.935242"))
+//        locationPoints.append(LocationCellObject(img: "pin", text: "Paris", updLatitude: "48.864716", updLongitude: "2.349014"))
+//        locationPoints.append(LocationCellObject(img: "pin", text: "Chicago", updLatitude: "41.881832", updLongitude: "-87.623177"))
+//        locationPoints.append(LocationCellObject(img: "pin", text: "Lviv", updLatitude: "49.8397", updLongitude: "24.0297"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,22 +43,22 @@ var locationPoints = [LocationCellObject]()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return locationPoints.count
+        return DataSource.sharedDataSource.locationPoints.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as? BaseTableViewCell
-        cell?.imgView.image = locationPoints[indexPath.row].getImage()
+        cell?.imgView.image = DataSource.sharedDataSource.locationPoints[indexPath.row].getImage()
         
-        cell?.lbl.text = locationPoints[indexPath.row].textLbl
+        cell?.lbl.text = DataSource.sharedDataSource.locationPoints[indexPath.row].textLbl
          //Configure the cell...
 
         return cell!
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedlocation = locationPoints[indexPath.row]
+        let selectedlocation = DataSource.sharedDataSource.locationPoints[indexPath.row]
         self.delegate?.locationSelected(newLocation: selectedlocation)
     }
     /*

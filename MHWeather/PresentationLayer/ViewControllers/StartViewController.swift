@@ -17,6 +17,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var currentCityForecast:CityForecastObject?
     var visualLocation: LocationCellObject?
     var conMan: ConnectionManager?
+    var pageIndex: Int = 0
 //    var closureSaver: ((_ result:CityForecastObject?) -> Void)?
    //    var locationManager: CLLocationManager = CLLocationManager()
     
@@ -99,9 +100,9 @@ weatherTableView.delegate = self
 }
 
 extension StartViewController: LocationSelectionDelegate {
-    func locationSelected(newLocation: LocationCellObject) {
+    func locationSelected(newLocation: LocationCellObject, selectedIndex:Int) {
         visualLocation = newLocation
-
+        pageIndex = selectedIndex
         conMan?.downloadByLocationObject(object: visualLocation!) {
             [unowned self] (result: CityForecastObject?) in
             guard let keyCity = self.visualLocation?.textLbl else { return }

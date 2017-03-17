@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol LocationSelectionDelegate: class {
-    func locationSelected(newLocation: LocationCellObject)
+    func locationSelected(newLocation: LocationCellObject, selectedIndex:Int)
 }
