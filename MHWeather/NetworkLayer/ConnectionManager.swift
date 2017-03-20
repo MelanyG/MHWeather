@@ -62,7 +62,7 @@ class ConnectionManager {
             if let data = data {
                 do {
                     if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                        print(jsonResult)
+//                        print(jsonResult)
                         
                         JSONParser.sharedParser.response = jsonResult
                         onCompletion(JSONParser.sharedParser.genarateMainSource())

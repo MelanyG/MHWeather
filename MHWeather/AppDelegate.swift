@@ -13,14 +13,45 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let queue = OperationQueue()
+        let count = DataSource.sharedDataSource.locationPoints.count
+        for i in 2..<count {
+            let semaphore = DispatchSemaphore(value: 0)
+            let operation1 = BlockOperation(block: {
+                guard let visualLocation = DataSource.sharedDataSource.locationPoints[i] else { return }
+                ConnectionManager.sharedInstance.downloadByLocationObject(object: visualLocation) {
+                    (result: CityForecastObject?) in
+                    //                guard let keyCity = visualLocation.textLbl else { return }
+                    //                self.currentCityForecast = result
+                    //                DispatchQueue.main.async {
+                    //                    self.weatherTableView.reloadData()
+                    //                    self.navBar.cityName.text = keyCity
+                    //                }
+                    DataSource.sharedDataSource.citiesForecast[visualLocation.textLbl] = result
+                    semaphore.signal()
+                    print("Operation \(i) result added")
+                }
+                
+                //            OperationQueue.mainQueue().addOperationWithBlock({
+                //                self.imageView1.image = img1
+                //            })
+            })
+            
+            operation1.completionBlock = {
+                print("Operation \(i) completed")
+            }
+            queue.addOperation(operation1)
+            semaphore.wait(timeout: .distantFuture)
+        }
         
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let leftNavController = splitViewController.viewControllers.first as! UINavigationController
         let subMenuViewController = leftNavController.topViewController as! SubMenuTVC
-        let startViewController = splitViewController.viewControllers.last as! StartViewController
+        let startViewController = splitViewController.viewControllers.last as! PageViewController
         
         subMenuViewController.delegate = startViewController
         // Override point for customization after application launch.

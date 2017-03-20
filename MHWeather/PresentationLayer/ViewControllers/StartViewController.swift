@@ -33,6 +33,7 @@ weatherTableView.delegate = self
         navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navBar.shadowImage = UIImage()
         navBar.isTranslucent = true
+        navBar.cityName.text = visualLocation?.textLbl
 //        self.navigationController?.view.backgroundColor = UIColor.clear
 //        conMan?.downLoadWeather("https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast10day/q/CA/San_Francisco.json")
      
@@ -103,16 +104,16 @@ extension StartViewController: LocationSelectionDelegate {
     func locationSelected(newLocation: LocationCellObject, selectedIndex:Int) {
         visualLocation = newLocation
         pageIndex = selectedIndex
-        conMan?.downloadByLocationObject(object: visualLocation!) {
-            [unowned self] (result: CityForecastObject?) in
-            guard let keyCity = self.visualLocation?.textLbl else { return }
-            self.currentCityForecast = result
-            DispatchQueue.main.async {
-                self.weatherTableView.reloadData()
-                self.navBar.cityName.text = keyCity
-            }
-            DataSource.sharedDataSource.citiesForecast[keyCity] = result
-        }
+//        conMan?.downloadByLocationObject(object: visualLocation!) {
+//            [unowned self] (result: CityForecastObject?) in
+//            guard let keyCity = self.visualLocation?.textLbl else { return }
+//            self.currentCityForecast = result
+//            DispatchQueue.main.async {
+//                self.weatherTableView.reloadData()
+//                self.navBar.cityName.text = keyCity
+//            }
+//            DataSource.sharedDataSource.citiesForecast[keyCity] = result
+//        }
            
 //        guard let keyCity = visualLocation?.textLbl else { return }
 //        currentCityForecast = DataSource.sharedDataSource.citiesForecast[keyCity]!

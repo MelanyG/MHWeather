@@ -49,9 +49,9 @@ weak var delegate: LocationSelectionDelegate?
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as? BaseTableViewCell
-        cell?.imgView.image = DataSource.sharedDataSource.locationPoints[indexPath.row].getImage()
+        cell?.imgView.image = DataSource.sharedDataSource.locationPoints[indexPath.row]?.getImage()
         
-        cell?.lbl.text = DataSource.sharedDataSource.locationPoints[indexPath.row].textLbl
+        cell?.lbl.text = DataSource.sharedDataSource.locationPoints[indexPath.row]?.textLbl
          //Configure the cell...
 
         return cell!
@@ -59,7 +59,8 @@ weak var delegate: LocationSelectionDelegate?
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedlocation = DataSource.sharedDataSource.locationPoints[indexPath.row]
-        self.delegate?.locationSelected(newLocation: selectedlocation)
+        guard let newLoc = selectedlocation else { return }
+        self.delegate?.locationSelected(newLocation: newLoc, selectedIndex:indexPath.row)
     }
     /*
     // Override to support conditional editing of the table view.

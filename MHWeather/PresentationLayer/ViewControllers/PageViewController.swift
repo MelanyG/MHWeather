@@ -13,7 +13,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
-        self.setViewControllers([getViewControllerAtIndex(index: 0)] as [StartViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+//        guard let pageVC = getViewControllerAtIndex(index: 0)! as StartViewController else { return }
+        self.setViewControllers([getViewControllerAtIndex(index: 2)!] as [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -55,9 +56,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "StartViewController") as! StartViewController
         guard let locObj = DataSource.sharedDataSource.locationPoints[index] else { return nil }
         pageContentViewController.visualLocation = locObj
+        guard let curDic = DataSource.sharedDataSource.citiesForecast[locObj.textLbl] else { return nil }
+        pageContentViewController.currentCityForecast = curDic
 
-        pageContentViewController.currentCityForecast = DataSource.sharedDataSource.citiesForecast[locObj.textLbl]
         pageContentViewController.pageIndex = index
+     
         return pageContentViewController
     }
 
