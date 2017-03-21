@@ -27,6 +27,11 @@ extension UIImageView {
         }).resume()
 
     }
+    
+    func maskDownloadImageView() {
+        self.image = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.tintColor = UIColor.white
+    }
 }
 
 

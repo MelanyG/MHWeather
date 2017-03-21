@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="539" height="187"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="539" height="187"/>
+                <rect key="frame" x="0.0" y="0.0" width="539" height="186"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgQ-Gf-YbE">
@@ -37,6 +37,7 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="7Mt-dQ-gQt">
                         <rect key="frame" x="35" y="68" width="20" height="30"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="MZq-xl-3FR"/>
                             <constraint firstAttribute="width" constant="20" id="ZzQ-Vg-QIX"/>
@@ -53,6 +54,7 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-tJ-tiJ">
                         <rect key="frame" x="103" y="68" width="20" height="30"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igY-gW-gyQ">
                         <rect key="frame" x="131" y="68" width="30" height="30"/>
@@ -64,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trC-Th-QOj">
-                        <rect key="frame" x="0.0" y="100" width="135" height="87"/>
+                        <rect key="frame" x="0.0" y="100" width="135" height="86"/>
                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="90"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -150,11 +152,13 @@
                 <outlet property="bigTempLable" destination="trC-Th-QOj" id="Zfs-SC-sn2"/>
                 <outlet property="containerForPartDays" destination="kCA-ys-utn" id="xIY-K2-iDg"/>
                 <outlet property="dayForecast" destination="qwe-VD-SMS" id="1Hy-RM-vnL"/>
+                <outlet property="downArrow" destination="MDs-tJ-tiJ" id="0yx-sR-TP1"/>
                 <outlet property="lowTemp" destination="igY-gW-gyQ" id="pEr-Ra-yo6"/>
                 <outlet property="mainImage" destination="GgQ-Gf-YbE" id="N4x-jY-6Sf"/>
                 <outlet property="mainLable" destination="Qfn-xG-iDL" id="9hN-f0-VYW"/>
                 <outlet property="nightForecast" destination="fwZ-zM-bgt" id="Zrt-ox-YiK"/>
                 <outlet property="topTemp" destination="z9v-Yd-yXw" id="dIn-k9-Qt7"/>
+                <outlet property="upArrow" destination="7Mt-dQ-gQt" id="2TZ-BS-tkc"/>
             </connections>
             <point key="canvasLocation" x="-28.5" y="-81.5"/>
         </tableViewCell>

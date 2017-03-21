@@ -37,6 +37,15 @@ class FullDay {
     }
 }
 
+class HourForecast {
+    var day: Int?
+    var hour: Int?
+    var ampm: String?
+    var iconUrl: String?
+    var humidity: Int?
+    var temp: Int?
+}
+
 class PartDayWeather {
     var dayPart: String?
     var weatherCondDescr: String?
@@ -49,20 +58,9 @@ class CityForecastObject {
     typealias partDayWeather = (day: String, hour: Int, imageUrl: String )
     
     var cityName: String?
-//    var weatherConditionName: String?
-//    var lowerTempPerDay: Int?
-//    var higherTempPerDay: Int?
-//    var genWeatherIconUrl: String?
-//    var currentTemp: Int? {
-//        set(newTemp){
-//        
-//        }
-//        get{
-//        return (lowerTempPerDay! + higherTempPerDay!) / 2
-//        }
-//    }
-    
-    var weatherDaysArray:Array<DayWeather> = Array()
+
+    var weatherDaysArray: Array<DayWeather> = Array()
+    var hourForecastArray: Array<HourForecast> = Array()
     
     var day: FullDay?
     

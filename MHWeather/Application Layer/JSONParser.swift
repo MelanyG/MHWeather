@@ -13,7 +13,7 @@ class JSONParser {
     
     var response: NSDictionary? {
         didSet {
-//            genarateMainSource()
+            //            genarateMainSource()
         }
     }
     
@@ -33,6 +33,8 @@ class JSONParser {
         guard let forecast = response?.object(forKey: "forecast") as? Dictionary<String, Any> else { return nil }
         guard let simpleforecast = forecast["simpleforecast"] as? Dictionary<String, Any> else { return nil }
         guard let forecastday = simpleforecast["forecastday"] as? Array<Any> else { return nil }
+        guard let hourForecastday = response?.object(forKey:"hourly_forecast") as? Array<Any> else { return nil }
+        
         for i in 0..<forecastday.count {
             parseforecastDay(forecastday: forecastday[i] as! Dictionary<String, Any>)
         }
@@ -52,6 +54,7 @@ class JSONParser {
             }
             indexGen = indexGen - 1
         }
+        parseHours(hourForecast: hourForecastday)
         guard let location = response?.object(forKey: "location") as? Dictionary<String, Any> else { return nil }
         guard let city = location["city"] as? String else { return nil }
         newCity?.cityName = city
@@ -59,12 +62,35 @@ class JSONParser {
         
     }
     
-    
+    func parseHours(hourForecast:Array<Any>) {
+        let count = hourForecast.count
+        for i in 0..<count {
+            let newHour = HourForecast()
+            guard let hourF = hourForecast[i] as? Dictionary<String, Any> else { return }
+            guard let time = hourF["FCTTIME"] as? Dictionary<String, Any> else { return }
+            guard let day = time["mday"] as? String else { return }
+            guard let hour = time["hour"] as? String else { return }
+            guard let ampm = time["ampm"] as? String else { return }
+
+            guard let humidity = hourF["humidity"] as? String else { return }
+            guard let icon_URL = hourF["icon_url"] as? String else { return }
+            guard let temperat = hourF["temp"] as? Dictionary<String, Any> else { return }
+            guard let temp = temperat["metric"] as? String else { return }
+            
+            newHour.day = Int(day)
+            newHour.hour = Int(hour)
+            newHour.ampm = ampm
+            newHour.humidity = Int(humidity)
+            newHour.iconUrl = icon_URL
+            newHour.temp = Int(temp)
+            newCity?.hourForecastArray.append(newHour)
+        }
+    }
     
     func parseforecastDay(forecastday: Dictionary<String, Any>) {
         
         guard let icon = forecastday["icon_url"] as? NSMutableString else { return }
-
+        
         //        newCity?.genWeatherIconUrl = icon
         guard let conditions = forecastday["conditions"] as? String else { return }
         //        newCity?.weatherConditionName = conditions
@@ -79,7 +105,7 @@ class JSONParser {
         dayWeather.iconUrl = icon as String?
         dayWeather.minTemp = Int(low["celsius"]!)
         dayWeather.maxTemp = Int(high["celsius"]!)
-       
+        
         dayWeather.conditions = conditions
         newCity?.weatherDaysArray.append(dayWeather)
         
