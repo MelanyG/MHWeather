@@ -44,7 +44,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
             return nil
         }
         index += 1
-        if index == DataSource.sharedDataSource.locationPoints.count || index < 2 {
+        if index == DataSource.sharedDataSource.locationPoints.count {
             return nil
         }
         return getViewControllerAtIndex(index: index)

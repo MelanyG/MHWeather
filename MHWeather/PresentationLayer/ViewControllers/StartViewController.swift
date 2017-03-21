@@ -64,6 +64,15 @@ weatherTableView.delegate = self
             if currentCityForecast?.weatherDaysArray[0].averageTemp != nil {
                 cell?.bigTempLable.text = "\((currentCityForecast?.weatherDaysArray[0].averageTemp)!)\u{00B0}"
             }
+            if currentCityForecast?.weatherDaysArray[0].iconUrl != nil {
+                cell?.mainImage.setImageWithURL(url: (currentCityForecast?.weatherDaysArray[0].iconUrl)!)
+            }
+            guard let partDayWeather = currentCityForecast?.weatherDaysArray[0].halfDayArray?[0] else { return cell! }
+//            cell?.dayForecast?.loadFromNibNamed(nibNamed: "PartDayView")
+            cell?.dayForecast?.initWithDate(dayPart: partDayWeather.dayPart!, imgUrl: partDayWeather.iconUrl!, weathDesc: partDayWeather.weatherCondDescr!)
+            guard let partDayWeatherNight = currentCityForecast?.weatherDaysArray[0].halfDayArray?[1] else { return cell! }
+//            cell?.nightForecast?.loadFromNibNamed(nibNamed: "PartDayView")
+            cell?.nightForecast?.initWithDate(dayPart: partDayWeatherNight.dayPart!, imgUrl: partDayWeatherNight.iconUrl!, weathDesc: partDayWeatherNight.weatherCondDescr!)
             return cell!
         } else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)

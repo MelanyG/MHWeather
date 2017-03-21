@@ -63,7 +63,8 @@ class JSONParser {
     
     func parseforecastDay(forecastday: Dictionary<String, Any>) {
         
-        guard let icon = forecastday["icon_url"] as? String else { return }
+        guard let icon = forecastday["icon_url"] as? NSMutableString else { return }
+
         //        newCity?.genWeatherIconUrl = icon
         guard let conditions = forecastday["conditions"] as? String else { return }
         //        newCity?.weatherConditionName = conditions
@@ -75,7 +76,7 @@ class JSONParser {
         
         let dayWeather = DayWeather()
         dayWeather.day = parseDate(date: date)
-        dayWeather.iconUrl = icon
+        dayWeather.iconUrl = icon as String?
         dayWeather.minTemp = Int(low["celsius"]!)
         dayWeather.maxTemp = Int(high["celsius"]!)
        

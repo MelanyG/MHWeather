@@ -25,12 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 guard let visualLocation = DataSource.sharedDataSource.locationPoints[i] else { return }
                 ConnectionManager.sharedInstance.downloadByLocationObject(object: visualLocation) {
                     (result: CityForecastObject?) in
-                    //                guard let keyCity = visualLocation.textLbl else { return }
-                    //                self.currentCityForecast = result
-                    //                DispatchQueue.main.async {
-                    //                    self.weatherTableView.reloadData()
-                    //                    self.navBar.cityName.text = keyCity
-                    //                }
+
                     DataSource.sharedDataSource.citiesForecast[visualLocation.textLbl] = result
                     semaphore.signal()
                     print("Operation \(i) result added")
