@@ -29,6 +29,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         conMan = ConnectionManager.sharedInstance
         weatherTableView.register(UINib(nibName: "CurrentDayForecastCell", bundle: nil), forCellReuseIdentifier: "CurrentDayCell")
+                weatherTableView.register(UINib(nibName: "WeekTableCell", bundle: nil), forCellReuseIdentifier: "WeekTableCell")
 weatherTableView.delegate = self
         navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navBar.shadowImage = UIImage()
@@ -47,7 +48,7 @@ weatherTableView.delegate = self
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 3
     }
     
     
@@ -68,11 +69,15 @@ weatherTableView.delegate = self
                 cell?.mainImage.setImageWithURL(url: (currentCityForecast?.weatherDaysArray[0].iconUrl)!)
             }
             guard let partDayWeather = currentCityForecast?.weatherDaysArray[0].halfDayArray?[0] else { return cell! }
-//            cell?.dayForecast?.loadFromNibNamed(nibNamed: "PartDayView")
             cell?.dayForecast?.initWithDate(dayPart: partDayWeather.dayPart!, imgUrl: partDayWeather.iconUrl!, weathDesc: partDayWeather.weatherCondDescr!)
+            
             guard let partDayWeatherNight = currentCityForecast?.weatherDaysArray[0].halfDayArray?[1] else { return cell! }
-//            cell?.nightForecast?.loadFromNibNamed(nibNamed: "PartDayView")
             cell?.nightForecast?.initWithDate(dayPart: partDayWeatherNight.dayPart!, imgUrl: partDayWeatherNight.iconUrl!, weathDesc: partDayWeatherNight.weatherCondDescr!)
+            return cell!
+        } else if indexPath.row == 2 {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeekTableCell", for: indexPath) as? WeekTableCell
+        cell?.dataSourse = (currentCityForecast?.weatherDaysArray)!
+            cell?.backgroundColor = UIColor.clear
             return cell!
         } else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
@@ -84,6 +89,8 @@ weatherTableView.delegate = self
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 1 {
             return 250
+        } else if indexPath.row == 2{
+            return 500
         } else {
             return view.bounds.size.height - 350
         }

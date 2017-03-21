@@ -13,6 +13,11 @@
 		390C45EC1E730AF000A2654E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C45EB1E730AF000A2654E /* Protocols.swift */; };
 		390E15221E7FE4E200FB3C76 /* UIImageView+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E15211E7FE4E200FB3C76 /* UIImageView+Downloading.swift */; };
 		390E15241E800AD400FB3C76 /* UIView+LoadNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E15231E800AD400FB3C76 /* UIView+LoadNib.swift */; };
+		390E15271E813CD800FB3C76 /* WeekTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E15251E813CD800FB3C76 /* WeekTableCell.swift */; };
+		390E15281E813CD800FB3C76 /* WeekTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390E15261E813CD800FB3C76 /* WeekTableCell.xib */; };
+		390E152A1E813E5A00FB3C76 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E15291E813E5A00FB3C76 /* DayCell.swift */; };
+		390E152C1E813E6A00FB3C76 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390E152B1E813E6A00FB3C76 /* DayCell.xib */; };
+		390E152E1E8169CE00FB3C76 /* DashHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390E152D1E8169CE00FB3C76 /* DashHeader.xib */; };
 		39181EF61E7C442B00C5B6B7 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39181EF51E7C442B00C5B6B7 /* PageViewController.swift */; };
 		3926EAF41E76F5CC001A39BF /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926EAF31E76F5CC001A39BF /* JSONParser.swift */; };
 		3926EAF61E76F8CD001A39BF /* CityForecastObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926EAF51E76F8CD001A39BF /* CityForecastObject.swift */; };
@@ -40,6 +45,11 @@
 		390C45EB1E730AF000A2654E /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../PresentationLayer/Protocols.swift; sourceTree = "<group>"; };
 		390E15211E7FE4E200FB3C76 /* UIImageView+Downloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloading.swift"; sourceTree = "<group>"; };
 		390E15231E800AD400FB3C76 /* UIView+LoadNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LoadNib.swift"; sourceTree = "<group>"; };
+		390E15251E813CD800FB3C76 /* WeekTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekTableCell.swift; sourceTree = "<group>"; };
+		390E15261E813CD800FB3C76 /* WeekTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekTableCell.xib; sourceTree = "<group>"; };
+		390E15291E813E5A00FB3C76 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		390E152B1E813E6A00FB3C76 /* DayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		390E152D1E8169CE00FB3C76 /* DashHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashHeader.xib; sourceTree = "<group>"; };
 		39181EF51E7C442B00C5B6B7 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3926EAF31E76F5CC001A39BF /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		3926EAF51E76F8CD001A39BF /* CityForecastObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityForecastObject.swift; sourceTree = "<group>"; };
@@ -76,6 +86,11 @@
 		390C45E61E72E36300A2654E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				390E15291E813E5A00FB3C76 /* DayCell.swift */,
+				390E152B1E813E6A00FB3C76 /* DayCell.xib */,
+				390E15251E813CD800FB3C76 /* WeekTableCell.swift */,
+				390E15261E813CD800FB3C76 /* WeekTableCell.xib */,
+				390E152D1E8169CE00FB3C76 /* DashHeader.xib */,
 				39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */,
 				39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */,
 				39830D641E76B76300099D88 /* PartDayView.swift */,
@@ -237,7 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39BC425A1E6D589A0081FE53 /* LaunchScreen.storyboard in Resources */,
+				390E152C1E813E6A00FB3C76 /* DayCell.xib in Resources */,
 				39830D671E76B78200099D88 /* PartDayView.xib in Resources */,
+				390E15281E813CD800FB3C76 /* WeekTableCell.xib in Resources */,
+				390E152E1E8169CE00FB3C76 /* DashHeader.xib in Resources */,
 				39BC42571E6D589A0081FE53 /* Assets.xcassets in Resources */,
 				39BC42521E6D589A0081FE53 /* Main.storyboard in Resources */,
 				39830D611E76B15A00099D88 /* CurrentDayForecastCell.xib in Resources */,
@@ -258,6 +276,7 @@
 				392DA82B1E79450E00D5EE95 /* DataSource.swift in Sources */,
 				390E15221E7FE4E200FB3C76 /* UIImageView+Downloading.swift in Sources */,
 				392DA8361E79A59E00D5EE95 /* StartViewController.swift in Sources */,
+				390E152A1E813E5A00FB3C76 /* DayCell.swift in Sources */,
 				390E15241E800AD400FB3C76 /* UIView+LoadNib.swift in Sources */,
 				390C45E01E72C6D900A2654E /* LocationManager.swift in Sources */,
 				392DA8371E79A59E00D5EE95 /* SubMenuTVC.swift in Sources */,
@@ -265,6 +284,7 @@
 				3926EAF41E76F5CC001A39BF /* JSONParser.swift in Sources */,
 				390C45EC1E730AF000A2654E /* Protocols.swift in Sources */,
 				390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */,
+				390E15271E813CD800FB3C76 /* WeekTableCell.swift in Sources */,
 				39830D631E76B3FA00099D88 /* DashView.swift in Sources */,
 				390C45E81E72E36300A2654E /* BaseTableViewCell.swift in Sources */,
 				39830D601E76B15A00099D88 /* CurrentDayForecastCell.swift in Sources */,

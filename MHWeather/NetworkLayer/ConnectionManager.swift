@@ -47,7 +47,7 @@ class ConnectionManager {
     }
    
     func downloadByCoordinates(long: String, lat: String, onCompletion:@escaping (_ result:CityForecastObject?) -> Void) {
-        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast/hourly/geolookup/q/\(lat),\(long).json"
+        url = "https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast10day/hourly/geolookup/q/\(lat),\(long).json"
         downLoadWeather(url!, onCompletion: onCompletion)
     }
     
