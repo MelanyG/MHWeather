@@ -80,7 +80,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/Application Layer/JSONParser.swift"
@@ -100,12 +100,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511892002.052709"
+            timestampString = "511961179.354291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "draw(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+            timestampString = "511961179.354291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "draw(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+            timestampString = "511976551.423113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "drawLables()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+            timestampString = "511976551.423113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "drawIconImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MHWeather.GraphView.drawIconImages () -&gt; ()"
+                  moduleName = "MHWeather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mhul/Documents/Projects/Weather/MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+                  timestampString = "511970426.218948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "558">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MHWeather.GraphView.(drawIconImages () -&gt; ()).(closure #1)"
+                  moduleName = "MHWeather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mhul/Documents/Projects/Weather/MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+                  timestampString = "511970426.220164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
+            timestampString = "511977280.684133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "calculatePointsForImages(degreesArray:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MHWeather/PresentationLayer/ViewControllers/StartViewController.swift"
+            timestampString = "511975630.933386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "getValidDataFrom(array:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -116,12 +228,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511895309.54106"
+            timestampString = "511977280.684133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "draw(_:)"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "drawBottomLables(fromArray:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

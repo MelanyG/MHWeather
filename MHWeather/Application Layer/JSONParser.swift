@@ -74,14 +74,17 @@ class JSONParser {
 
             guard let humidity = hourF["humidity"] as? String else { return }
             guard let icon_URL = hourF["icon_url"] as? String else { return }
+            guard let icon = hourF["icon"] as? String else { return }
             guard let temperat = hourF["temp"] as? Dictionary<String, Any> else { return }
             guard let temp = temperat["metric"] as? String else { return }
+
             
             newHour.day = Int(day)
             newHour.hour = Int(hour)
             newHour.ampm = ampm
             newHour.humidity = Int(humidity)
             newHour.iconUrl = icon_URL
+            newHour.icon = icon
             newHour.temp = Int(temp)
             newCity?.hourForecastArray.append(newHour)
         }

@@ -25,7 +25,6 @@ extension UIImageView {
             }
 
         }).resume()
-
     }
     
     func maskDownloadImageView() {

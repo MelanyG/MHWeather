@@ -41,6 +41,7 @@ class HourForecast {
     var day: Int?
     var hour: Int?
     var ampm: String?
+    var icon: String?
     var iconUrl: String?
     var humidity: Int?
     var temp: Int?

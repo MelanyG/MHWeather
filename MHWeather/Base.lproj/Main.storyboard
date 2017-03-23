@@ -131,13 +131,13 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acL-5R-x5E" customClass="GraphView" customModule="MHWeather" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="0.0" width="335" height="44"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                                            <color key="value" red="0.58741555639999998" green="0.1124230415" blue="0.89361554379999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                                            <color key="value" red="1" green="0.75694266649999997" blue="0.9745689475" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>

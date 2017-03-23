@@ -26,7 +26,7 @@ class DashView: UIView {
         
         path.lineWidth = 1.0
         path.lineCapStyle = .butt
-        UIColor.lightGray.set()
+        UIColor.white.set()
         path.stroke()
     }
  

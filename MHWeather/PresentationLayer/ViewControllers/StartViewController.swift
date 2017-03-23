@@ -49,7 +49,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 6
     }
     
     
@@ -75,16 +75,17 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let partDayWeatherNight = currentCityForecast?.weatherDaysArray[0].halfDayArray?[1] else { return cell! }
             cell?.nightForecast?.initWithDate(dayPart: partDayWeatherNight.dayPart!, imgUrl: partDayWeatherNight.iconUrl!, weathDesc: partDayWeatherNight.weatherCondDescr!)
             return cell!
-        } else if indexPath.row == 2 {
+        } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for: indexPath)
             
             return cell
-        } else if indexPath.row == 3 {
+        } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GraphCell", for: indexPath) as? BaseTableViewCell
+            let data = getValidDataFrom(array: (currentCityForecast?.hourForecastArray)!)
             cell?.graphView.graphPoints = (currentCityForecast?.hourForecastArray)!
             return cell!
             
-        } else if indexPath.row == 4 {
+        } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "WeekTableCell", for: indexPath) as? WeekTableCell
             cell?.dataSourse = (currentCityForecast?.weatherDaysArray)!
             cell?.backgroundColor = UIColor.clear
@@ -99,16 +100,38 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 1 {
             return 300
-        } else if indexPath.row == 2 {
+        } else if indexPath.row == 3 || indexPath.row == 2{
             return 50
-        } else if indexPath.row == 3 || indexPath.row == 4 {
+        } else if indexPath.row == 4 || indexPath.row == 5 {
             return 500
         } else {
-            return view.bounds.size.height - 350
+            return view.bounds.size.height - 360
         }
     }
     
-    
+    func getValidDataFrom(array:[HourForecast]) -> [HourForecast] {
+        var ar: [HourForecast] = Array()
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let day = calendar.component(.day, from: date)
+        let hour = calendar.component(.hour, from: date)
+
+       
+
+        for i in 0..<array.count {
+            if array[i].day == day {
+                if array[i].hour == hour {
+                   let arra = Array(array[i..<(i + 25)])
+                    
+                   return arra
+                }
+            }
+        }
+        
+        
+        return ar
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
