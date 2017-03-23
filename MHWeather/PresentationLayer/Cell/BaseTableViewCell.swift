@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class BaseTableViewCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class BaseTableViewCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var colView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -37,6 +37,9 @@
 		39BC42571E6D589A0081FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42561E6D589A0081FE53 /* Assets.xcassets */; };
 		39BC425A1E6D589A0081FE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC42581E6D589A0081FE53 /* LaunchScreen.storyboard */; };
 		39BC42651E6D5B530081FE53 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC42641E6D5B530081FE53 /* ConnectionManager.swift */; };
+		39E340DC1E842D6C0057FF95 /* DropCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E340DA1E842D6C0057FF95 /* DropCell.swift */; };
+		39E340DF1E842F0E0057FF95 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E340DE1E842F0E0057FF95 /* DropView.swift */; };
+		39E340E11E8437F80057FF95 /* DropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E340E01E8437F80057FF95 /* DropTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		39BC42591E6D589A0081FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39BC425B1E6D589B0081FE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BC42641E6D5B530081FE53 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		39E340DA1E842D6C0057FF95 /* DropCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropCell.swift; sourceTree = "<group>"; };
+		39E340DE1E842F0E0057FF95 /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		39E340E01E8437F80057FF95 /* DropTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 				39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */,
 				39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */,
 				39830D641E76B76300099D88 /* PartDayView.swift */,
+				39E340DA1E842D6C0057FF95 /* DropCell.swift */,
 				39830D661E76B78200099D88 /* PartDayView.xib */,
 				390C45E71E72E36300A2654E /* BaseTableViewCell.swift */,
+				39E340E01E8437F80057FF95 /* DropTableViewCell.swift */,
 				390C45E91E72F48400A2654E /* LocationCellObject.swift */,
 			);
 			path = Cell;
@@ -116,6 +124,7 @@
 		390E15331E828BFF00FB3C76 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				39E340DE1E842F0E0057FF95 /* DropView.swift */,
 				390E15341E828BFF00FB3C76 /* DashView.swift */,
 				390E15351E828BFF00FB3C76 /* GraphView.swift */,
 			);
@@ -294,8 +303,11 @@
 				392DA8371E79A59E00D5EE95 /* SubMenuTVC.swift in Sources */,
 				39181EF61E7C442B00C5B6B7 /* PageViewController.swift in Sources */,
 				3926EAF41E76F5CC001A39BF /* JSONParser.swift in Sources */,
+				39E340DC1E842D6C0057FF95 /* DropCell.swift in Sources */,
 				390C45EC1E730AF000A2654E /* Protocols.swift in Sources */,
+				39E340E11E8437F80057FF95 /* DropTableViewCell.swift in Sources */,
 				390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */,
+				39E340DF1E842F0E0057FF95 /* DropView.swift in Sources */,
 				390E15271E813CD800FB3C76 /* WeekTableCell.swift in Sources */,
 				390C45E81E72E36300A2654E /* BaseTableViewCell.swift in Sources */,
 				39830D601E76B15A00099D88 /* CurrentDayForecastCell.swift in Sources */,

@@ -154,6 +154,95 @@
                                             <outlet property="graphView" destination="acL-5R-x5E" id="MkE-Wu-d7r"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="Idv-bS-TmQ" customClass="BaseTableViewCell" customModule="MHWeather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="343" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Idv-bS-TmQ" id="zJI-Jv-R8O">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-DC-uSK">
+                                                    <rect key="frame" x="20" y="2" width="335" height="196"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8fB-9L-IVt">
+                                                        <size key="itemSize" width="170" height="186"/>
+                                                        <size key="headerReferenceSize" width="50" height="50"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DropCell" id="hiu-w9-oei" customClass="DropCell" customModule="MHWeather" customModuleProvider="target">
+                                                            <rect key="frame" x="83" y="50" width="170" height="186"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="186"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-b0-ylE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n7-wF-7wM">
+                                                                        <rect key="frame" x="20" y="165" width="130" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-wg-AuW" customClass="DropView" customModule="MHWeather" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="21" width="170" height="144"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </view>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" id="9OY-Qo-dJz"/>
+                                                                <constraint firstItem="6I2-b0-ylE" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" id="NGi-pc-ZX8"/>
+                                                                <constraint firstAttribute="bottom" secondItem="4n7-wF-7wM" secondAttribute="bottom" id="RJi-Bw-U5d"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4n7-wF-7wM" secondAttribute="trailing" constant="20" id="VXp-VI-ocE"/>
+                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="top" secondItem="6I2-b0-ylE" secondAttribute="bottom" id="Woj-Al-J4m"/>
+                                                                <constraint firstItem="4n7-wF-7wM" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" constant="20" id="aBw-hI-Okd"/>
+                                                                <constraint firstItem="4n7-wF-7wM" firstAttribute="top" secondItem="3LV-wg-AuW" secondAttribute="bottom" id="eVr-Ov-DNd"/>
+                                                                <constraint firstItem="6I2-b0-ylE" firstAttribute="top" secondItem="hiu-w9-oei" secondAttribute="top" id="gJm-4K-iW4"/>
+                                                                <constraint firstAttribute="trailing" secondItem="3LV-wg-AuW" secondAttribute="trailing" id="nMY-61-cOA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="6I2-b0-ylE" secondAttribute="trailing" id="oR4-Xx-dWs"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="chanceOfRain" destination="4n7-wF-7wM" id="MxR-Aa-RvV"/>
+                                                                <outlet property="partOfDay" destination="6I2-b0-ylE" id="h8S-6A-RCd"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashSeparator" id="yVQ-SR-HnG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhj-Hn-xQP" customClass="DashView" customModule="MHWeather" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="0.0" width="295" height="50"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Lhj-Hn-xQP" firstAttribute="leading" secondItem="yVQ-SR-HnG" secondAttribute="leading" constant="20" id="40e-93-u6M"/>
+                                                            <constraint firstItem="Lhj-Hn-xQP" firstAttribute="top" secondItem="yVQ-SR-HnG" secondAttribute="top" id="Gse-dQ-e7Z"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Lhj-Hn-xQP" secondAttribute="trailing" constant="20" id="JLg-Za-z0n"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Lhj-Hn-xQP" secondAttribute="bottom" id="V1U-0C-nnp"/>
+                                                        </constraints>
+                                                    </collectionReusableView>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7AD-DC-uSK" secondAttribute="bottom" constant="2" id="6kJ-Fz-n25"/>
+                                                <constraint firstItem="7AD-DC-uSK" firstAttribute="leading" secondItem="zJI-Jv-R8O" secondAttribute="leading" constant="20" id="QV7-gt-wca"/>
+                                                <constraint firstItem="7AD-DC-uSK" firstAttribute="top" secondItem="zJI-Jv-R8O" secondAttribute="top" constant="2" id="Yuj-Sg-Vvd"/>
+                                                <constraint firstAttribute="trailing" secondItem="7AD-DC-uSK" secondAttribute="trailing" constant="20" id="qmG-ex-UZ1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="colView" destination="7AD-DC-uSK" id="GBe-B9-C1y"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="188-op-sk0" id="elO-Gg-eRp"/>
@@ -183,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-7S-BoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="1.3493253373313345"/>
+            <point key="canvasLocation" x="1467.5" y="0.5"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="IOk-Xy-GOW">
