@@ -154,20 +154,20 @@
                                             <outlet property="graphView" destination="acL-5R-x5E" id="MkE-Wu-d7r"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="Idv-bS-TmQ" customClass="BaseTableViewCell" customModule="MHWeather" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DropTableViewCell" rowHeight="200" id="Idv-bS-TmQ" customClass="DropTableViewCell" customModule="MHWeather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="343" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Idv-bS-TmQ" id="zJI-Jv-R8O">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-DC-uSK">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-DC-uSK">
                                                     <rect key="frame" x="20" y="2" width="335" height="196"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8fB-9L-IVt">
                                                         <size key="itemSize" width="170" height="186"/>
                                                         <size key="headerReferenceSize" width="50" height="50"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="50" height="50"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
@@ -178,21 +178,21 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="186"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-b0-ylE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="21"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-b0-ylE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n7-wF-7wM">
-                                                                        <rect key="frame" x="20" y="165" width="130" height="21"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n7-wF-7wM">
+                                                                        <rect key="frame" x="20" y="156" width="130" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-wg-AuW" customClass="DropView" customModule="MHWeather" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="21" width="170" height="144"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-wg-AuW" customClass="DropView" customModule="MHWeather" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="30" width="170" height="126"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     </view>
                                                                 </subviews>
                                                             </view>
@@ -214,20 +214,38 @@
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
-                                                    <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashSeparator" id="yVQ-SR-HnG">
+                                                    <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashHeaderSeparator" id="M7V-3o-ycs">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhj-Hn-xQP" customClass="DashView" customModule="MHWeather" customModuleProvider="target">
-                                                                <rect key="frame" x="20" y="0.0" width="295" height="50"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGa-MQ-tLL" customClass="DashView" customModule="MHWeather" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="Lhj-Hn-xQP" firstAttribute="leading" secondItem="yVQ-SR-HnG" secondAttribute="leading" constant="20" id="40e-93-u6M"/>
-                                                            <constraint firstItem="Lhj-Hn-xQP" firstAttribute="top" secondItem="yVQ-SR-HnG" secondAttribute="top" id="Gse-dQ-e7Z"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Lhj-Hn-xQP" secondAttribute="trailing" constant="20" id="JLg-Za-z0n"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Lhj-Hn-xQP" secondAttribute="bottom" id="V1U-0C-nnp"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JGa-MQ-tLL" secondAttribute="bottom" id="4Ob-KV-U9V"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JGa-MQ-tLL" secondAttribute="trailing" id="N8Q-h2-HP0"/>
+                                                            <constraint firstItem="JGa-MQ-tLL" firstAttribute="top" secondItem="M7V-3o-ycs" secondAttribute="top" id="kBi-gj-d7D"/>
+                                                            <constraint firstItem="JGa-MQ-tLL" firstAttribute="leading" secondItem="M7V-3o-ycs" secondAttribute="leading" id="xMi-KR-VZc"/>
+                                                        </constraints>
+                                                    </collectionReusableView>
+                                                    <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashFooterSeparator" id="EZQ-ZH-zEs">
+                                                        <rect key="frame" x="0.0" y="236" width="335" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsJ-Jc-6NL" customClass="DashView" customModule="MHWeather" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="tsJ-Jc-6NL" firstAttribute="top" secondItem="EZQ-ZH-zEs" secondAttribute="top" id="9t1-gz-ASG"/>
+                                                            <constraint firstItem="tsJ-Jc-6NL" firstAttribute="leading" secondItem="EZQ-ZH-zEs" secondAttribute="leading" id="WYc-bo-2Hr"/>
+                                                            <constraint firstAttribute="trailing" secondItem="tsJ-Jc-6NL" secondAttribute="trailing" id="b3M-Wm-JPt"/>
+                                                            <constraint firstAttribute="bottom" secondItem="tsJ-Jc-6NL" secondAttribute="bottom" id="wZd-lg-Hcg"/>
                                                         </constraints>
                                                     </collectionReusableView>
                                                 </collectionView>
@@ -239,6 +257,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="7AD-DC-uSK" secondAttribute="trailing" constant="20" id="qmG-ex-UZ1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="colView" destination="7AD-DC-uSK" id="GBe-B9-C1y"/>
                                         </connections>
@@ -272,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-7S-BoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1467.5" y="0.5"/>
+            <point key="canvasLocation" x="1466.4000000000001" y="0.44977511244377816"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="IOk-Xy-GOW">

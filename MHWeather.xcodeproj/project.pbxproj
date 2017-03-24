@@ -27,6 +27,7 @@
 		392DA8301E798F6300D5EE95 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392DA82F1E798F6300D5EE95 /* TransparentNavigationBar.swift */; };
 		392DA8361E79A59E00D5EE95 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392DA8341E79A59E00D5EE95 /* StartViewController.swift */; };
 		392DA8371E79A59E00D5EE95 /* SubMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392DA8351E79A59E00D5EE95 /* SubMenuTVC.swift */; };
+		39396DF41E85750F0038F220 /* CALayer+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396DF31E85750F0038F220 /* CALayer+Drawing.swift */; };
 		39830D601E76B15A00099D88 /* CurrentDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */; };
 		39830D611E76B15A00099D88 /* CurrentDayForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */; };
 		39830D651E76B76300099D88 /* PartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D641E76B76300099D88 /* PartDayView.swift */; };
@@ -63,6 +64,7 @@
 		392DA82F1E798F6300D5EE95 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		392DA8341E79A59E00D5EE95 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		392DA8351E79A59E00D5EE95 /* SubMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubMenuTVC.swift; sourceTree = "<group>"; };
+		39396DF31E85750F0038F220 /* CALayer+Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Drawing.swift"; sourceTree = "<group>"; };
 		39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDayForecastCell.swift; sourceTree = "<group>"; };
 		39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentDayForecastCell.xib; sourceTree = "<group>"; };
 		39830D641E76B76300099D88 /* PartDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDayView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		390E15201E7FE4E200FB3C76 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				39396DF31E85750F0038F220 /* CALayer+Drawing.swift */,
 				390E15231E800AD400FB3C76 /* UIView+LoadNib.swift */,
 				390E15211E7FE4E200FB3C76 /* UIImageView+Downloading.swift */,
 			);
@@ -295,6 +298,7 @@
 				39BC42551E6D589A0081FE53 /* MHWeather.xcdatamodeld in Sources */,
 				390E15361E828BFF00FB3C76 /* DashView.swift in Sources */,
 				392DA82B1E79450E00D5EE95 /* DataSource.swift in Sources */,
+				39396DF41E85750F0038F220 /* CALayer+Drawing.swift in Sources */,
 				390E15221E7FE4E200FB3C76 /* UIImageView+Downloading.swift in Sources */,
 				392DA8361E79A59E00D5EE95 /* StartViewController.swift in Sources */,
 				390E152A1E813E5A00FB3C76 /* DayCell.swift in Sources */,

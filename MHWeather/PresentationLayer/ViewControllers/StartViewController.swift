@@ -49,7 +49,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 7
     }
     
     
@@ -90,6 +90,12 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell?.dataSourse = (currentCityForecast?.weatherDaysArray)!
             cell?.backgroundColor = UIColor.clear
             return cell!
+        }
+        else if indexPath.row == 6 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DropTableViewCell", for: indexPath) as? DropTableViewCell
+            
+            
+            return cell!
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
             return cell
@@ -104,6 +110,8 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return 50
         } else if indexPath.row == 4 || indexPath.row == 5 {
             return 500
+        } else if indexPath.row == 6 {
+            return 360
         } else {
             return view.bounds.size.height - 360
         }
