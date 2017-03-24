@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511961179.354291"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511961179.354291"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511976551.423113"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "drawLables()"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511976551.423113"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "drawIconImages()"
             landmarkType = "7">
             <Locations>
@@ -196,11 +196,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511977280.684133"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
             landmarkName = "calculatePointsForImages(degreesArray:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -228,11 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MHWeather/PresentationLayer/Cell/CustomViews/GraphView.swift"
-            timestampString = "511977280.684133"
+            timestampString = "512068245.335565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "drawBottomLables(fromArray:)"
             landmarkType = "7">
          </BreakpointContent>

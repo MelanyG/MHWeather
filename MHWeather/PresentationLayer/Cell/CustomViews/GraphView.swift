@@ -63,6 +63,7 @@ import UIKit
         
         //set up the points line
         let graphPath = UIBezierPath()
+        graphPath.lineJoinStyle = .round
         
         //go to start of line
         let pointOne = CGPoint(x:columnXPoint(0),
