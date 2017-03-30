@@ -191,25 +191,28 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-wg-AuW" customClass="DropView" customModule="MHWeather" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="30" width="170" height="126"/>
+                                                                        <rect key="frame" x="0.0" y="8" width="170" height="170"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="170" id="1OD-RA-Xk0"/>
+                                                                            <constraint firstAttribute="height" constant="170" id="ruk-aZ-HoO"/>
+                                                                        </constraints>
                                                                     </view>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" id="9OY-Qo-dJz"/>
                                                                 <constraint firstItem="6I2-b0-ylE" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" id="NGi-pc-ZX8"/>
+                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="centerX" secondItem="hiu-w9-oei" secondAttribute="centerX" id="NIF-oe-CeF"/>
                                                                 <constraint firstAttribute="bottom" secondItem="4n7-wF-7wM" secondAttribute="bottom" id="RJi-Bw-U5d"/>
                                                                 <constraint firstAttribute="trailing" secondItem="4n7-wF-7wM" secondAttribute="trailing" constant="20" id="VXp-VI-ocE"/>
-                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="top" secondItem="6I2-b0-ylE" secondAttribute="bottom" id="Woj-Al-J4m"/>
                                                                 <constraint firstItem="4n7-wF-7wM" firstAttribute="leading" secondItem="hiu-w9-oei" secondAttribute="leading" constant="20" id="aBw-hI-Okd"/>
-                                                                <constraint firstItem="4n7-wF-7wM" firstAttribute="top" secondItem="3LV-wg-AuW" secondAttribute="bottom" id="eVr-Ov-DNd"/>
                                                                 <constraint firstItem="6I2-b0-ylE" firstAttribute="top" secondItem="hiu-w9-oei" secondAttribute="top" id="gJm-4K-iW4"/>
-                                                                <constraint firstAttribute="trailing" secondItem="3LV-wg-AuW" secondAttribute="trailing" id="nMY-61-cOA"/>
+                                                                <constraint firstItem="3LV-wg-AuW" firstAttribute="centerY" secondItem="hiu-w9-oei" secondAttribute="centerY" id="nsa-DW-YFt"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6I2-b0-ylE" secondAttribute="trailing" id="oR4-Xx-dWs"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="chanceOfRain" destination="4n7-wF-7wM" id="MxR-Aa-RvV"/>
+                                                                <outlet property="dropView" destination="3LV-wg-AuW" id="XRB-tB-12T"/>
                                                                 <outlet property="partOfDay" destination="6I2-b0-ylE" id="h8S-6A-RCd"/>
                                                             </connections>
                                                         </collectionViewCell>

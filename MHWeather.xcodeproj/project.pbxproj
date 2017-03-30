@@ -28,6 +28,8 @@
 		392DA8361E79A59E00D5EE95 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392DA8341E79A59E00D5EE95 /* StartViewController.swift */; };
 		392DA8371E79A59E00D5EE95 /* SubMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392DA8351E79A59E00D5EE95 /* SubMenuTVC.swift */; };
 		39396DF41E85750F0038F220 /* CALayer+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396DF31E85750F0038F220 /* CALayer+Drawing.swift */; };
+		39396E1B1E8D57C00038F220 /* DropLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396E191E8D57C00038F220 /* DropLayer.swift */; };
+		39396E1C1E8D57C00038F220 /* WavesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396E1A1E8D57C00038F220 /* WavesLayer.swift */; };
 		39830D601E76B15A00099D88 /* CurrentDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */; };
 		39830D611E76B15A00099D88 /* CurrentDayForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */; };
 		39830D651E76B76300099D88 /* PartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D641E76B76300099D88 /* PartDayView.swift */; };
@@ -65,6 +67,8 @@
 		392DA8341E79A59E00D5EE95 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		392DA8351E79A59E00D5EE95 /* SubMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubMenuTVC.swift; sourceTree = "<group>"; };
 		39396DF31E85750F0038F220 /* CALayer+Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Drawing.swift"; sourceTree = "<group>"; };
+		39396E191E8D57C00038F220 /* DropLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropLayer.swift; sourceTree = "<group>"; };
+		39396E1A1E8D57C00038F220 /* WavesLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WavesLayer.swift; sourceTree = "<group>"; };
 		39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDayForecastCell.swift; sourceTree = "<group>"; };
 		39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentDayForecastCell.xib; sourceTree = "<group>"; };
 		39830D641E76B76300099D88 /* PartDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDayView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 		390E15331E828BFF00FB3C76 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				39396E191E8D57C00038F220 /* DropLayer.swift */,
+				39396E1A1E8D57C00038F220 /* WavesLayer.swift */,
 				39E340DE1E842F0E0057FF95 /* DropView.swift */,
 				390E15341E828BFF00FB3C76 /* DashView.swift */,
 				390E15351E828BFF00FB3C76 /* GraphView.swift */,
@@ -299,6 +305,7 @@
 				390E15361E828BFF00FB3C76 /* DashView.swift in Sources */,
 				392DA82B1E79450E00D5EE95 /* DataSource.swift in Sources */,
 				39396DF41E85750F0038F220 /* CALayer+Drawing.swift in Sources */,
+				39396E1B1E8D57C00038F220 /* DropLayer.swift in Sources */,
 				390E15221E7FE4E200FB3C76 /* UIImageView+Downloading.swift in Sources */,
 				392DA8361E79A59E00D5EE95 /* StartViewController.swift in Sources */,
 				390E152A1E813E5A00FB3C76 /* DayCell.swift in Sources */,
@@ -309,6 +316,7 @@
 				3926EAF41E76F5CC001A39BF /* JSONParser.swift in Sources */,
 				39E340DC1E842D6C0057FF95 /* DropCell.swift in Sources */,
 				390C45EC1E730AF000A2654E /* Protocols.swift in Sources */,
+				39396E1C1E8D57C00038F220 /* WavesLayer.swift in Sources */,
 				39E340E11E8437F80057FF95 /* DropTableViewCell.swift in Sources */,
 				390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */,
 				39E340DF1E842F0E0057FF95 /* DropView.swift in Sources */,

@@ -56,6 +56,9 @@ class DropTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.reuseIdentifier, for: indexPath) as! DropCell
         cell.partOfDay.text = Constants.dayParts[currentTime + indexPath.item]
         cell.chanceOfRain.text = "25%"
+        if indexPath.item % 2 == 0 {
+            cell.dropView.dropLevel = 0.25
+        }
 //            let day = dataSource[4 + indexPath.item] as DayWeather
 //            cell.setUpCell(withDay: day)
 

@@ -12,13 +12,10 @@ class DropCell: UICollectionViewCell {
     
   @IBOutlet weak var partOfDay: UILabel!
   @IBOutlet weak var chanceOfRain: UILabel!
-    
-    
+  @IBOutlet weak var dropView: DropView!
     
     override func awakeFromNib() {
-
-      
-        super.awakeFromNib()
+         super.awakeFromNib()
         // Initialization code
     }
 

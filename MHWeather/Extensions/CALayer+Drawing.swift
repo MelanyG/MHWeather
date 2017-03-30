@@ -32,12 +32,34 @@ extension CALayer {
         bezierPath.addLine(to: CGPoint(x: -63.15, y: 9.5))
         bezierPath.lineJoinStyle = .round
         bezierPath.lineCapStyle = .round
-        context?.saveGState()
-        context?.setShadow(offset: shadow.shadowOffset, blur: shadow.shadowBlurRadius, color: (shadow.shadowColor as! UIColor).cgColor)
+//        context?.saveGState()
+        
         UIColor.white.setStroke()
+        UIColor(colorLiteralRed: 161/255, green: 218/255, blue: 253/255, alpha: 1.0).setFill()
         bezierPath.lineWidth = 5
         bezierPath.stroke()
-        context?.restoreGState()
+        bezierPath.fill()
+//        context?.restoreGState()
+        
+        context?.setShadow(offset: shadow.shadowOffset, blur: shadow.shadowBlurRadius, color: (shadow.shadowColor as! UIColor).cgColor)
+//        let width = rect.width
+//        let height = rect.height
+//        let shadow = NSShadow()
+//        shadow.shadowColor = UIColor.darkGray.withAlphaComponent(0.6)
+//        shadow.shadowOffset = CGSize(width: 1, height: 1)
+//        shadow.shadowBlurRadius = 3
+//        
+//        let bezierPath1 = UIBezierPath()
+//        bezierPath1.move(to: CGPoint(x: rect.midX, y: 10))
+//        bezierPath1.addCurve(to: CGPoint(x: rect.midX, y: height*0.8 ), controlPoint1: CGPoint(x: rect.midX*1.1, y: height/5 ), controlPoint2: CGPoint(x: width*1.5, y: height/4*3))
+//        bezierPath1.addCurve(to: CGPoint(x: rect.midX, y: 10), controlPoint1: CGPoint(x: rect.midX*0.45, y: height/4*3), controlPoint2: CGPoint(x: rect.midX, y: 10))
+//        UIColor.white.setStroke()
+//        UIColor(colorLiteralRed: 161/255, green: 218/255, blue: 253/255, alpha: 1.0).setFill()
+//        bezierPath1.lineWidth = 3
+//        bezierPath1.lineJoinStyle = .round
+//        bezierPath1.lineCapStyle = .round
+//        bezierPath1.stroke()
+//        bezierPath1.fill
     }
     
 

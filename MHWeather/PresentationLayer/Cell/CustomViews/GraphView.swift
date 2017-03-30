@@ -87,8 +87,7 @@ import UIKit
         
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        
+ 
         let colorLocations:[CGFloat] = [0.0, 0.5]
         let colors = [startColor.withAlphaComponent(0.4).cgColor, endColor.withAlphaComponent(0.4).cgColor]
         let gradient = CGGradient(colorsSpace: colorSpace,
