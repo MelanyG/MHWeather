@@ -265,13 +265,27 @@
                                             <outlet property="colView" destination="7AD-DC-uSK" id="GBe-B9-C1y"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JcM-os-KQl">
-                                        <rect key="frame" x="0.0" y="543" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SunCell" rowHeight="500" id="JcM-os-KQl" customClass="BaseTableViewCell" customModule="MHWeather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="543" width="375" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JcM-os-KQl" id="4h1-3W-gPd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZN5-cQ-xrT" customClass="NatureView" customModule="MHWeather" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="20" width="335" height="460"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ZN5-cQ-xrT" firstAttribute="leading" secondItem="4h1-3W-gPd" secondAttribute="leading" constant="20" id="Hqu-lv-5yq"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZN5-cQ-xrT" secondAttribute="bottom" constant="20" id="LUm-XN-osK"/>
+                                                <constraint firstItem="ZN5-cQ-xrT" firstAttribute="top" secondItem="4h1-3W-gPd" secondAttribute="top" constant="20" id="NAF-Mc-1sZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZN5-cQ-xrT" secondAttribute="trailing" constant="20" id="jMq-UX-51b"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

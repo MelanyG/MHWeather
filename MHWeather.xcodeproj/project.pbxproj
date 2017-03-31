@@ -31,6 +31,7 @@
 		39396E1B1E8D57C00038F220 /* DropLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396E191E8D57C00038F220 /* DropLayer.swift */; };
 		39396E1C1E8D57C00038F220 /* WavesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396E1A1E8D57C00038F220 /* WavesLayer.swift */; };
 		39396E1F1E8E78030038F220 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39396E1E1E8E78030038F220 /* CoreMotion.framework */; };
+		395ECB651E8EA0E700003C2B /* NatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395ECB641E8EA0E700003C2B /* NatureView.swift */; };
 		39830D601E76B15A00099D88 /* CurrentDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */; };
 		39830D611E76B15A00099D88 /* CurrentDayForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */; };
 		39830D651E76B76300099D88 /* PartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39830D641E76B76300099D88 /* PartDayView.swift */; };
@@ -71,6 +72,7 @@
 		39396E191E8D57C00038F220 /* DropLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropLayer.swift; sourceTree = "<group>"; };
 		39396E1A1E8D57C00038F220 /* WavesLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WavesLayer.swift; sourceTree = "<group>"; };
 		39396E1E1E8E78030038F220 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		395ECB641E8EA0E700003C2B /* NatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatureView.swift; sourceTree = "<group>"; };
 		39830D5E1E76B15A00099D88 /* CurrentDayForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDayForecastCell.swift; sourceTree = "<group>"; };
 		39830D5F1E76B15A00099D88 /* CurrentDayForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentDayForecastCell.xib; sourceTree = "<group>"; };
 		39830D641E76B76300099D88 /* PartDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDayView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		390E15331E828BFF00FB3C76 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				395ECB641E8EA0E700003C2B /* NatureView.swift */,
 				39396E191E8D57C00038F220 /* DropLayer.swift */,
 				39396E1A1E8D57C00038F220 /* WavesLayer.swift */,
 				39E340DE1E842F0E0057FF95 /* DropView.swift */,
@@ -328,6 +331,7 @@
 				3926EAF41E76F5CC001A39BF /* JSONParser.swift in Sources */,
 				39E340DC1E842D6C0057FF95 /* DropCell.swift in Sources */,
 				390C45EC1E730AF000A2654E /* Protocols.swift in Sources */,
+				395ECB651E8EA0E700003C2B /* NatureView.swift in Sources */,
 				39396E1C1E8D57C00038F220 /* WavesLayer.swift in Sources */,
 				39E340E11E8437F80057FF95 /* DropTableViewCell.swift in Sources */,
 				390C45EA1E72F48400A2654E /* LocationCellObject.swift in Sources */,
