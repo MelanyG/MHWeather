@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lviv" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-4V-Hpa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shtorm" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-4V-Hpa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-1j-j7E" customClass="TransparentNavigationBar" customModule="MHWeather" customModuleProvider="target">
@@ -389,6 +389,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Lviv" width="760" height="427"/>
+        <image name="Shtorm" width="680" height="670"/>
     </resources>
 </document>

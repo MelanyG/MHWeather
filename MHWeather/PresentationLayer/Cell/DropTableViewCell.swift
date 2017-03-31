@@ -12,14 +12,23 @@ class DropTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollecti
 
     var dataSource = Array<Any>()
     var currentTime: Int = 0
+    var animationReset = false
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         colView.delegate = self
         colView.dataSource = self
+        
+
         // Initialization code
     }
-
+    
+    override func prepareForReuse() {
+       animationReset = true
+        colView.reloadData()
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -55,15 +64,23 @@ class DropTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollecti
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.reuseIdentifier, for: indexPath) as! DropCell
         cell.partOfDay.text = Constants.dayParts[currentTime + indexPath.item]
-        cell.chanceOfRain.text = "25%"
+        
+        
         if indexPath.item % 2 == 0 {
             cell.dropView.dropLevel = 0.25
+            cell.chanceOfRain.text = "Chance 25%"
+        } else {
+            cell.dropView.dropLevel = 0
+            cell.chanceOfRain.text = "Chance 0%"
         }
 //            let day = dataSource[4 + indexPath.item] as DayWeather
 //            cell.setUpCell(withDay: day)
 
 //        cell.backgroundColor = UIColor.red
-        
+        if animationReset {
+            cell.resetAnimation()
+        }
+
         return cell
         
     }

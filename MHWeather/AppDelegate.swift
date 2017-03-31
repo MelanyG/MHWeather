@@ -8,12 +8,15 @@
 
 import UIKit
 import CoreData
+import CoreMotion
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    let motionManager = CMMotionManager()
+    let xxx = 5
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         

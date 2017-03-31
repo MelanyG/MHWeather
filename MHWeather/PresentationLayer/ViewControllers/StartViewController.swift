@@ -18,6 +18,8 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var visualLocation: LocationCellObject?
     var conMan: ConnectionManager?
     var pageIndex: Int = 0
+    var locationOfCellYPosition: CGFloat = 0
+    var alreadyStoppedMotion = true
     //    var closureSaver: ((_ result:CityForecastObject?) -> Void)?
     //    var locationManager: CLLocationManager = CLLocationManager()
     
@@ -30,7 +32,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         conMan = ConnectionManager.sharedInstance
         weatherTableView.register(UINib(nibName: "CurrentDayForecastCell", bundle: nil), forCellReuseIdentifier: "CurrentDayCell")
         weatherTableView.register(UINib(nibName: "WeekTableCell", bundle: nil), forCellReuseIdentifier: "WeekTableCell")
-//        weatherTableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "GraphCell")
+        //        weatherTableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "GraphCell")
         weatherTableView.delegate = self
         navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navBar.shadowImage = UIImage()
@@ -40,6 +42,11 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //        conMan?.downLoadWeather("https://api.wunderground.com/api/5ae5ac6f06196ca9/forecast10day/q/CA/San_Francisco.json")
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopMotionManager()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,8 +100,8 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DropTableViewCell", for: indexPath) as? DropTableViewCell
-            
-            
+            alreadyStoppedMotion = false
+            locationOfCellYPosition = (cell?.frame.origin.y)!
             return cell!
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
@@ -124,15 +131,15 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let day = calendar.component(.day, from: date)
         let hour = calendar.component(.hour, from: date)
-
-       
-
+        
+        
+        
         for i in 0..<array.count {
             if array[i].day == day {
                 if array[i].hour == hour {
-                   let arra = Array(array[i..<(i + 25)])
+                    let arra = Array(array[i..<(i + 25)])
                     
-                   return arra
+                    return arra
                 }
             }
         }
@@ -156,8 +163,23 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
      // Pass the selected object to the new view controller.
      }
      */
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.frame.origin.y + scrollView.frame.size.height < locationOfCellYPosition && !alreadyStoppedMotion {
+            stopMotionManager()
+        }
+    }
+    
+    func stopMotionManager() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.motionManager.isDeviceMotionActive {
+            appDelegate.motionManager.stopDeviceMotionUpdates()
+            alreadyStoppedMotion = true
+        }
+    }
     
 }
+
+
 
 extension StartViewController: LocationSelectionDelegate {
     func locationSelected(newLocation: LocationCellObject, selectedIndex:Int) {

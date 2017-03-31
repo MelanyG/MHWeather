@@ -14,9 +14,10 @@ class DropCell: UICollectionViewCell {
   @IBOutlet weak var chanceOfRain: UILabel!
   @IBOutlet weak var dropView: DropView!
     
-    override func awakeFromNib() {
-         super.awakeFromNib()
-        // Initialization code
+    func resetAnimation() {
+        dropView.resetAnimation()
     }
+    
+    
 
 }

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+import CoreMotion
 
 class DropView: UIView, CAAnimationDelegate {
     
@@ -20,6 +19,10 @@ class DropView: UIView, CAAnimationDelegate {
     var dropLevel: CGFloat = 0
     var setWatherLevel: CGFloat {
         return dropLevel - 1
+    }
+    var motionManager: CMMotionManager {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.motionManager
     }
     
     override func draw(_ rect: CGRect) {
@@ -35,7 +38,7 @@ class DropView: UIView, CAAnimationDelegate {
         layer.addSublayer(bigHiddenDrop)
         
         fallingWaterLayer = CAShapeLayer()
-        fallingWaterLayer.frame = rect
+        fallingWaterLayer.frame = CGRect(origin: rect.origin, size: CGSize(width: rect.size.width * 3, height: rect.size.height))
         fallingWaterLayer.fillColor = UIColor.blue.cgColor
         let path = CGPath(rect:fallingWaterLayer.bounds, transform:nil)
         fallingWaterLayer.path = path
@@ -43,7 +46,7 @@ class DropView: UIView, CAAnimationDelegate {
         layer.addSublayer(mainLayer!)
         bigHiddenDrop.mask = fallingWaterLayer
         addAnimation()
-   
+        
     }
     
     func addAnimation() {
@@ -68,7 +71,26 @@ class DropView: UIView, CAAnimationDelegate {
                 bigHiddenDrop?.mask = seaMaskLayer
                 animate()
             } else {
-                drawOblique()
+                drawObliqueLine()
+            }
+        }
+        let queue = OperationQueue()
+        if motionManager.isAccelerometerAvailable {
+            motionManager.deviceMotionUpdateInterval = 0.01
+            motionManager.startDeviceMotionUpdates(to: queue) {
+                [weak self] (data: CMDeviceMotion?, error: Error?) in
+                if let acceleration = data?.gravity {
+                    let rotation = atan2(acceleration.x, acceleration.y) - M_PI
+                    OperationQueue.main.addOperation {
+                        if rotation > 0.2 {
+                            self?.bigHiddenDrop?.mask = self?.fallingWaterLayer
+                            self?.bigHiddenDrop.transform = CATransform3DMakeAffineTransform(CGAffineTransform(rotationAngle: CGFloat(rotation)))
+                        } else {
+                            self?.bigHiddenDrop?.mask = self?.seaMaskLayer
+                            self?.bigHiddenDrop.transform = CATransform3DMakeAffineTransform(CGAffineTransform(rotationAngle: CGFloat(0)))
+                        }
+                    }
+                }
             }
         }
     }
@@ -84,16 +106,31 @@ class DropView: UIView, CAAnimationDelegate {
         
     }
     
-    func drawOblique() {
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: bounds.width * 0.2, y: bounds.height * 0.95 ))
-        path.addLine(to: CGPoint(x: bounds.width * 0.8, y: bounds.height * 0.2))
-        
-        obliqueLine = CAShapeLayer()
-        obliqueLine.path = path.cgPath
-        obliqueLine.strokeColor = UIColor.white.cgColor
-        obliqueLine.lineWidth = 5.0
-        layer.addSublayer(obliqueLine)
+    func drawObliqueLine() {
+        if obliqueLine == nil {
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: bounds.width * 0.2, y: bounds.height * 0.95 ))
+            path.addLine(to: CGPoint(x: bounds.width * 0.8, y: bounds.height * 0.2))
+            
+            obliqueLine = CAShapeLayer()
+            obliqueLine.path = path.cgPath
+            obliqueLine.strokeColor = UIColor.white.cgColor
+            obliqueLine.lineWidth = 5.0
+            layer.addSublayer(obliqueLine)
+        } else {
+            obliqueLine.isHidden = false
+        }
     }
-
+    
+    func resetAnimation() {
+        if obliqueLine != nil {
+            obliqueLine.isHidden = true
+        }
+      
+        bigHiddenDrop.removeAllAnimations()
+        bigHiddenDrop.bounds.origin.x = 0
+        bigHiddenDrop.mask = fallingWaterLayer
+        addAnimation()
+    }
+    
 }
