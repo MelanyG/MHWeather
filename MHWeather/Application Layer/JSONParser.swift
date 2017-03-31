@@ -71,7 +71,7 @@ class JSONParser {
             guard let day = time["mday"] as? String else { return }
             guard let hour = time["hour"] as? String else { return }
             guard let ampm = time["ampm"] as? String else { return }
-
+            guard let pop = hourF["pop"] as? String else { return }
             guard let humidity = hourF["humidity"] as? String else { return }
             guard let icon_URL = hourF["icon_url"] as? String else { return }
             guard let icon = hourF["icon"] as? String else { return }
@@ -86,6 +86,7 @@ class JSONParser {
             newHour.iconUrl = icon_URL
             newHour.icon = icon
             newHour.temp = Int(temp)
+            newHour.pop = Int(pop)
             newCity?.hourForecastArray.append(newHour)
         }
     }
@@ -93,14 +94,9 @@ class JSONParser {
     func parseforecastDay(forecastday: Dictionary<String, Any>) {
         
         guard let icon = forecastday["icon_url"] as? NSMutableString else { return }
-        
-        //        newCity?.genWeatherIconUrl = icon
         guard let conditions = forecastday["conditions"] as? String else { return }
-        //        newCity?.weatherConditionName = conditions
         guard let low = forecastday["low"] as? Dictionary<String, String> else { return }
-        //        newCity?.lowerTempPerDay =  low["celsius"] as? Int
         guard let high = forecastday["high"] as? Dictionary<String, String> else { return }
-        //        newCity?.higherTempPerDay =  high["celsius"] as? Int
         guard let date = forecastday["date"] as? Dictionary<String, Any> else { return }
         
         let dayWeather = DayWeather()
@@ -129,6 +125,7 @@ class JSONParser {
         someHalf.dayPart = half["title"] as? String
         someHalf.weatherCondDescr = half["fcttext_metric"] as? String
         someHalf.iconUrl = half["icon_url"] as? String
+        someHalf.pop = Int(half["pop"] as! String)
         return someHalf
     }
     

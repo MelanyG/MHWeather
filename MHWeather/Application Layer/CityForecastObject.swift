@@ -45,12 +45,14 @@ class HourForecast {
     var iconUrl: String?
     var humidity: Int?
     var temp: Int?
+    var pop: Int?
 }
 
 class PartDayWeather {
     var dayPart: String?
     var weatherCondDescr: String?
     var iconUrl: String?
+    var pop: Int?
     
 }
 

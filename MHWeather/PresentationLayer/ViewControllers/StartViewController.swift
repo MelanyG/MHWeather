@@ -100,6 +100,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DropTableViewCell", for: indexPath) as? DropTableViewCell
+            cell?.dataSource = (currentCityForecast?.hourForecastArray)!
             alreadyStoppedMotion = false
             locationOfCellYPosition = (cell?.frame.origin.y)!
             return cell!

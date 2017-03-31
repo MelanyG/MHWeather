@@ -63,20 +63,17 @@ class DropTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.reuseIdentifier, for: indexPath) as! DropCell
-        cell.partOfDay.text = Constants.dayParts[currentTime + indexPath.item]
-        
-        
-        if indexPath.item % 2 == 0 {
-            cell.dropView.dropLevel = 0.25
-            cell.chanceOfRain.text = "Chance 25%"
-        } else {
+        let hour: HourForecast = dataSource[indexPath.item * 6] as! HourForecast
+        cell.partOfDay.text = getpartOfTheDay(currentTime: hour.hour!)
+
+        if hour.pop == nil {
             cell.dropView.dropLevel = 0
             cell.chanceOfRain.text = "Chance 0%"
+        } else {
+            cell.dropView.dropLevel = CGFloat(hour.pop!) / 100
+            cell.chanceOfRain.text = "Chance \(hour.pop!)%"
         }
-//            let day = dataSource[4 + indexPath.item] as DayWeather
-//            cell.setUpCell(withDay: day)
 
-//        cell.backgroundColor = UIColor.red
         if animationReset {
             cell.resetAnimation()
         }
@@ -106,6 +103,18 @@ class DropTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollecti
         default:
             //4
             assert(false, "Unexpected element kind")
+        }
+    }
+    
+    func getpartOfTheDay(currentTime:Int) -> String{
+        switch currentTime {
+        case 1...4: return Constants.dayParts[5]
+        case 4...8: return Constants.dayParts[0]
+        case 9...13: return Constants.dayParts[1]
+        case 14...18: return Constants.dayParts[2]
+        case 19...22: return Constants.dayParts[3]
+        case 23: return Constants.dayParts[4]
+        default: return Constants.dayParts[4]
         }
     }
 }

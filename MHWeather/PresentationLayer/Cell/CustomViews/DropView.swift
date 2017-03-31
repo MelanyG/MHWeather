@@ -31,10 +31,6 @@ class DropView: UIView, CAAnimationDelegate {
         bigHiddenDrop = DropLayer(rect,
                                   shouldFillLayer:true)
         bigHiddenDrop?.opacity = 1.0
-        //        bigHiddenDrop?.transform = CATransform3DMakeScale(0.5, 0.5, 1.0)
-        //        bigHiddenDrop?.isHidden = true
-        
-        
         layer.addSublayer(bigHiddenDrop)
         
         fallingWaterLayer = CAShapeLayer()
